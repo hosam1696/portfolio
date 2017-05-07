@@ -10,6 +10,12 @@
 :root {
   font-size: 12px; }
 
+@media (max-width:768px) {
+ #portfolio {
+       width: 95%;
+    margin: 0 auto;
+  }
+}
 body {
   overflow: hidden;
   background-color: #1e1e1e; }
