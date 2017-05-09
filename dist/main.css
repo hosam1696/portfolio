@@ -10,7 +10,7 @@
 :root {
   font-size: 12px; }
 
-@media (max-width:768px) {
+@media (min-width:678px) {
  #portfolio {
        width: 95%;
     margin: 0 auto;
