@@ -2,3 +2,4 @@ node_modules
 src
 .sass-cache
 .vscode
+*.swp
