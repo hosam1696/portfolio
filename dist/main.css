@@ -209,14 +209,37 @@ body {
       box-shadow: 0 1px #444; }
   #side-info .info {
     flex: 1; }
-    #side-info .info p {
+    #side-info .info .statics  p.head,#side-info .info .contact  p.head {
       padding-left: 5px;
       margin-bottom: 5px;
       font-weight: bold;
       color: #ddd; }
-    #side-info .info .statics {
+
+#side-info .info .statics {
       flex: 1; }
-    #side-info .info .contact li i {
+#side-info .info .statics .lang-stat p{
+  font-weight: normal;
+  padding-left: 10px;
+  margin-bottom: 0.3rem;
+}
+#side-info .info .statics .lang-stat span {
+  display: inline-block;
+  width: 12px;
+  height: 24px;
+  background-color: #333;
+  transform: skew(-25deg);
+  margin: 5px 2px;
+  border-radius: 2px;
+  /* border: 1px solid #222; */
+  box-shadow: 2px 2px #141414;
+}
+#side-info .info .statics .lang-stat span.filled {
+  background-color: #03a9f4;
+}
+#side-info .info .statics .lang-stat span:first-of-type {
+  margin-left: 20px
+}
+#side-info .info .contact li i {
       transition: transform 0.5s ease-in-out; }
     #side-info .info .contact li:hover > i {
       transform: rotate(360deg);
