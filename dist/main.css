@@ -116,11 +116,11 @@ body {
           z-index: 4;
           overflow: hidden; }
   .right-col #portfolio .container {
-    background-color: #222227; */
+    /*background-color: #222227; */
     /* margin-top: -40px; */
     color: #fff;
     /* border: 1px solid #111; */
-    /* border-radius: 4px; */
+    /* border-radius: 4px; */}
     padding: 18px;
     .right-col #portfolio .container section {
       margin-bottom: 45px; }
