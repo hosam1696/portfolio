@@ -237,7 +237,7 @@ body {
   box-shadow: 2px 2px #141414;
 }
 #side-info .info .statics .lang-stat span.filled {
-  background-color: #03a9f4;
+  background-color: #8d8d8d;
 }
 #side-info .info .statics .lang-stat span:first-of-type {
   margin-left: 20px
