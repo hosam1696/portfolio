@@ -132,7 +132,7 @@ body {
       margin-bottom: 15px; }
     .right-col #portfolio .container #about p {
       color: #ccc;
-      text-indent: 25px;
+      /*text-indent: 25px;*/
       font-size: 1.25rem;
       letter-spacing: 1px;
       text-align: justify; }
@@ -157,7 +157,7 @@ body {
     padding: 5px 10px;
     font-size: 1.1rem; }
     #side-info li .vertical-sep {
-      margin: -1px 6px;
+      margin: -1px 5px;
       width: 3px;
       height: 10px;
       line-height: 3px;
@@ -216,6 +216,7 @@ body {
       padding-left: 5px;
       margin-bottom: 5px;
       font-weight: bold;
+      letter-spacing: 1px;
       color: #ddd; }
 
 #side-info .info .statics {
@@ -224,6 +225,10 @@ body {
   font-weight: normal;
   padding-left: 10px;
   margin-bottom: 0.3rem;
+}
+#side-info .info .statics .lang-stat:hover > span.filled {
+  background-color: #b2b2b2;
+  box-shadow: 3px 3px #141414;
 }
 #side-info .info .statics .lang-stat span {
   display: inline-block;
@@ -238,15 +243,19 @@ body {
 }
 #side-info .info .statics .lang-stat span.filled {
   background-color: #8d8d8d;
+  transition: background-color 0.2s ease;
 }
 #side-info .info .statics .lang-stat span:first-of-type {
   margin-left: 20px
 }
+#side-info .info .contact {
+  margin-bottom: 5px;
+}
 #side-info .info .contact li i {
       transition: transform 0.5s ease-in-out; }
     #side-info .info .contact li:hover > i {
-      transform: rotate(360deg);
-      color: #03a9f4; }
+      transform: rotate(360deg) scale(1.3);
+      color: #fff; }
     #side-info .info .contact li a {
       color: #ccc;
       text-decoration: none; 
