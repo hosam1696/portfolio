@@ -34,7 +34,8 @@ body {
       width: 8%;
       margin-top: 10px;
       background-color: #111;
-      box-shadow: 1px 1px #333; }
+      box-shadow: 1px 1px #333;
+        }
     body h1.lead:before {
       content: '';
       display: block;
@@ -109,7 +110,7 @@ body {
         .right-col section#hero-section .hero-content h1:before {
           content: 'Portfolio ';
           color: #333;
-          background-color: #03a9f4;
+          background: linear-gradient(to right,#1b7bce,#26b5f5 45%,#26b5f5 55%,#1b7bce);
           position: absolute;
           top: -5px;
           padding-top: 5px;
@@ -117,7 +118,8 @@ body {
           width: 100%;
           height: 65%;
           z-index: 4;
-          overflow: hidden; }
+          overflow: hidden;
+        border-radius: 4px 30px 0 0   }
   .right-col #portfolio .container {
     /*background-color: #222227; */
     /* margin-top: -40px; */
@@ -324,9 +326,7 @@ body {
 
         color : #f4f4f4
       }
-      #work .project-col .project:hover .project-img h4:after {
-
-      }
+  
     #work .project-col .project .project-btns {
       align-items: center;
       justify-content: center;
@@ -375,3 +375,85 @@ body {
 }
 
 /*# sourceMappingURL=main.css.map */
+/*#bg3 {
+  background: linear-gradient(to right,#1e1e1e 10%,#1b7bce,#1b7bce, #1e1e1e 90%);  
+}
+#bg3 .square {
+  
+  background: #125896 ;
+}
+#bg3 .triangle {
+  background: #125896 ;
+}
+#bg2 {
+  background: linear-gradient(to right,#1e1e1e 10%,#d41688,#d41688, #1e1e1e 90%);
+}
+#bg2 .triangle{
+  background-color: #c50e7c
+}
+#bg2 .square{
+  background-color: #980e61
+}
+#bg1 { 
+  background: linear-gradient(to right,#1e1e1e 10%,#2d942d,#2d942d, #1e1e1e 90%);
+  background-color: #2d942d
+}
+#bg1 .triangle {
+  background-color: #036b03
+}
+#bg1 .square{
+
+  background: linear-gradient(to right,#1e1e1e 10%,#d41688,#d41688, #1e1e1e 90%);
+  background-color: #036b03
+}*/
+.background {
+    height: 45px;
+    position: relative;
+    overflow: hidden;
+  width: 80%;
+  margin: 10px auto 25px;
+  border-radius: 5px;
+  line-height: 45px;
+  text-align: center;
+  background: linear-gradient(to right,#1e1e1e 5%,#1e1e1e 20%,#1b7bce,#26b5f5 45%,#26b5f5 55%,#1b7bce, #1e1e1e 80%,#1e1e1e 95%)  
+  
+}
+.background .content {
+  position: relative;
+  color: #fff;
+  z-index: 99
+}
+.background .icon {
+  position: absolute;
+  z-index: 99;
+  color: #fff;
+  bottom: -20%;
+  
+  opacity: .15;
+  font-size: 20em
+}
+.background:nth-child(odd) .icon {
+  right: 0;
+}
+
+.content h1 {
+  margin: 0;
+  font-family: 'Open Sans Condensed', sans-serif;
+  word-spacing: 4px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 2.5em
+}
+.square {
+    position: absolute;
+    
+    -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%)
+}
+.triangle {
+    position: absolute;
+    
+    -webkit-clip-path: polygon(0% 0%,100% 0%, 100% 100%, 50% 100%, 50% 50%, 0% 50%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 50% 50%, 0% 50%);
+    
+}
