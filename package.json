@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "live:reload": "reload . -p 9661 -b"
   },
   "keywords": [],
   "author": "",

@@ -308,7 +308,7 @@ body {
       flex-direction: column;
       padding: 0;
       background-size: cover;
-      background-image: linear-gradient(transparent, #000), url(//s2.pluralsight.com/learner/a4a714229164486d4b5a40c81559cc6d.jpg); }
+      background-image: linear-gradient(transparent, #000), url('../proj-img.jpg'); }
       #work .project-col .project .project-img h4 {
         color : #ccc;
         width: 100%;
@@ -407,13 +407,13 @@ body {
   background-color: #036b03
 }*/
 .background {
-    height: 45px;
+    height: 30px;
     position: relative;
     overflow: hidden;
   width: 80%;
   margin: 10px auto 25px;
   border-radius: 5px;
-  line-height: 45px;
+  line-height: 28px;
   text-align: center;
   background: linear-gradient(to right,#1e1e1e 5%,#1e1e1e 20%,#1b7bce,#26b5f5 45%,#26b5f5 55%,#1b7bce, #1e1e1e 80%,#1e1e1e 95%)  
   
