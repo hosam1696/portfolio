@@ -1,10 +1,13 @@
 // service-worker.js file
+
+
 const cacheName = 'v2'
 const cacheFiles = [
     './index.html',
     './dist/main.css',
     './proj-img.jpg',
-    './hosam.png'
+    './hosam.png',
+    './logo.png'
 ]
 self.addEventListener('install', (e) => {
     console.log('>service worker Installed..')
