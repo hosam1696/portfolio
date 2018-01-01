@@ -3,7 +3,7 @@
   "short_name": "hosamsam",
   "theme_color": "#1e1e1e",
   "background_color": "#23a9ec",
-  "display": "browser",
+  "display": "fullscreen",
   "Scope": "/",
   "start_url": "/",
   "icons": [

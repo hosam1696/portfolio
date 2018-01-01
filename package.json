@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "live:reload": "reload . -p 9661 -b"
+    "live:reload": "reload . -p 9661 -b",
+    "status": "lighthouse"
   },
   "keywords": [],
   "author": "",
