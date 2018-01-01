@@ -3,11 +3,13 @@
 
 const cacheName = 'v2'
 const cacheFiles = [
+    '/',
     './index.html',
     './dist/main.css',
     './proj-img.jpg',
     './hosam.png',
-    './logo.png'
+    './logo.png',
+    './lib/bootstrap.min.css'
 ]
 self.addEventListener('install', (e) => {
     console.log('>service worker Installed..')
@@ -32,15 +34,28 @@ self.addEventListener('activate', (e) => {
         })))
     )
 })
-/*
-self.addEventListener('fetch', (e) => {
+
+self.addEventListener('fetch', event => {
+        // Prevent the default, and handle the request ourselves.
+        event.respondWith(async function () {
+            // Try to get the response from a cache.
+            const cachedResponse = await caches.match(event.request);
+            // Return it if we found one.
+            if (cachedResponse) return cachedResponse;
+            // If we didn't find a match in the cache, use the network.
+            return fetch(event.request);
+        }());
+    });
+    /*
     e.respondWith(
         caches.match(e.request)
             .then(res => {
                 if (res) {
                     console.log('> service worker found in cache', res)
                     return res
-                } else {
+                } 
+                
+                    
                     let reqClone = e.request.clone()
                     fetch(reqClone)
                         .then(res => {
@@ -55,9 +70,12 @@ self.addEventListener('fetch', (e) => {
                                     return res
                                 })
                         })
-                }
-            })
-    )
-})
+                        
 
-*/
+                return fetch(e.request)
+            }
+                
+            )
+    )
+})*/
+

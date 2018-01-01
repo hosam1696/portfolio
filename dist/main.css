@@ -288,12 +288,14 @@ body {
 
 #work .row .project-col {
   margin-top: 15px;
+  
     width: 33%;
   max-width: 33%; }
   #work .project-col .project {
     box-shadow: 10px 10px 20px #111;
     height: 225px;
     overflow: hidden;
+    margin-bottom: 10px !important;
     border: 1px solid transparent;
     border-color: transparent;
     transition: border-color 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
@@ -353,25 +355,48 @@ body {
         padding: 5px 0 0 5px;
         color: #999;
         flex: 1; }
-      @media (max-width: 780px) {
-        #side-info {
-          display: none;
-        }
-        #work .row .project-col {
-          display: inline-block;
-          margin-top: 15px;
-          max-width: 50% ;
-          width: 50% !important;
-        }
-      }
+@media (max-width: 779px) {
+  #hero-section .hero-content .hero-title {
+    transform: scale(0.8)
+  }
+  #side-info {
+    display: none;
+  }
+  #work .row .project-col {
+    display: inline-block;
+    margin-top: 15px;
+    max-width: 50% ;
+    width: 50% !important;
+  }
+  #skills ul {
+    padding-left: 10px
+  }
+  #skills ul li i {
+    font-size: 10px
+  }
+}
 
 @media (min-width: 780px) {
-
-    #work .row .project-col {
-        margin-top: 15px;
-        max-width: 33% ;
-        width: 33% !important;
-    }
+  #work .projects-holder {
+    display: flex;
+    flex-flow: wrap;
+  }
+  #work .project-col {
+    width: 50%;
+    min-width: 50%;
+  }
+  #work .row .project-col {
+      margin-top: 15px;
+      
+      max-width: 33% ;
+      width: 33% !important;
+  }
+}
+@media (min-width:1120px) {
+  #work .project-col {
+    width: 33%;
+    min-width: 33%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
