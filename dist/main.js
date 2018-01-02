@@ -1,14 +1,3 @@
-if ('serviceWorker' in navigator) {
-
-    navigator.serviceWorker
-        .register('./sw.js', { scope: './' })
-        .then((reg) => {
-            console.log('service worker is ready!')
-        }).catch(err => {
-            console.warn('service worker is failed to register!', erdr)
-        })
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     const showSide = document.getElementById('l-side')
     const leftSide = document.getElementById('side-info')
@@ -19,7 +8,17 @@ document.addEventListener('DOMContentLoaded', () => {
         else
             leftSide.style.left = '-100%'    
     })
-    console.log('dom loaded');
+    if ('serviceWorker' in navigator) {
+
+        navigator.serviceWorker
+            .register('./sw.js', { scope: './' })
+            .then((reg) => {
+                console.info('service worker is ready!')
+            }).catch(err => {
+                console.warn('service worker is failed to register!', erdr)
+            })
+    }
+
 })
 /* web worker
 if (window && window.Worker) {

@@ -378,24 +378,27 @@ body {
     height: 0 
   }
   #side-info .show-side:checked:before {
-    left: 225px
+    left: 225px;
+    padding-left: 0;
+    
   }
   
   #side-info .show-side:before{
-    content:"+";
-    color: #fff;
+        content: "||";
+    color: #ffffff;
     text-align: center;
     line-height: 50px;
     position: relative;
     display: block;
     width: 50px;
     height: 50px;
+    padding-left: 15px;
     font-size: 26px;
     background-color: #03a9f4;
     border-radius: 50%;
-    top:50%;
-    left: 0;
-    transition: left cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.35s 0.1s
+    top: 50%;
+    left: -25px;
+    transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.35s 0.1s;
   }
   #work .row .project-col {
     display: inline-block;

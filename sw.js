@@ -12,7 +12,7 @@ const cacheFiles = [
     './lib/bootstrap.min.css'
 ]
 self.addEventListener('install', (e) => {
-    console.log('>service worker Installed..')
+    console.log('> service worker Installed..')
     e.waitUntil(
         caches.open(cacheName)
             .then(cache => {
