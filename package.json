@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "live:reload": "reload . -p 9661 -b",
-    "status": "lighthouse https://hosamsam.github.io/portfolio"
+    "status": "lighthouse https://hosamsam.github.io/portfolio",
+    "start" : "npm run live:reload"
   },
   "keywords": [],
   "author": "",

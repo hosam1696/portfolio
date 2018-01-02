@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     const showSide = document.getElementById('l-side')
     const leftSide = document.getElementById('side-info')
+    const cvBtn = document.getElementById('cv-btn')
+    const cvs = document.querySelectorAll('.cv-down')
+    let cvSlide = true
     showSide.addEventListener('click', event => {
         let checked = event.target.checked
         if (checked)
@@ -8,11 +11,21 @@ document.addEventListener('DOMContentLoaded', () => {
         else
             leftSide.style.left = '-100%'
     })
+    cvBtn.addEventListener('click', event => {
+        
+        if (event.srcElement.nodeName != 'A') {
+            cvs.forEach((cv, i) => {
+                cvSlide?cv.classList.add('slided'):cv.classList.remove('slided')
+            })
+            cvSlide = !cvSlide
+        }
+        
+    })
 });
 
 
 // service worker
-
+/*
 if ('serviceWorker' in navigator) {
 
     navigator.serviceWorker
@@ -20,7 +33,7 @@ if ('serviceWorker' in navigator) {
             console.warn('service worker is failed to register!', err)
         })
 }
-
+*/
 /* web worker
 if (window && window.Worker) {
     let webWorker = new Worker('./ww.js')

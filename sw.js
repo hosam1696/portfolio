@@ -6,6 +6,7 @@ const cacheFiles = [
     '/',
     './index.html',
     './dist/main.css',
+    '/dist/main.js',
     './proj-img.jpg',
     './hosam.png',
     './logo.png',
