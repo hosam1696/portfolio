@@ -6,20 +6,21 @@ document.addEventListener('DOMContentLoaded', () => {
         if (checked)
             leftSide.style.left = 0
         else
-            leftSide.style.left = '-100%'    
+            leftSide.style.left = '-100%'
     })
-    if ('serviceWorker' in navigator) {
+});
 
-        navigator.serviceWorker
-            .register('./sw.js', { scope: './' })
-            .then((reg) => {
-                console.info('service worker is ready!')
-            }).catch(err => {
-                console.warn('service worker is failed to register!', erdr)
-            })
-    }
 
-})
+// service worker
+
+if ('serviceWorker' in navigator) {
+
+    navigator.serviceWorker
+        .register('sw.js', { scope: './' }).catch(err => {
+            console.warn('service worker is failed to register!', err)
+        })
+}
+
 /* web worker
 if (window && window.Worker) {
     let webWorker = new Worker('./ww.js')

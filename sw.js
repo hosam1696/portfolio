@@ -1,7 +1,7 @@
 // service-worker.js file
 
 
-const cacheName = 'v2'
+const cacheName = 'cache assets';
 const cacheFiles = [
     '/',
     './index.html',
@@ -9,22 +9,18 @@ const cacheFiles = [
     './proj-img.jpg',
     './hosam.png',
     './logo.png',
-    './lib/bootstrap.min.css'
-]
-self.addEventListener('install', (e) => {
-    console.log('> service worker Installed..')
-    e.waitUntil(
-        caches.open(cacheName)
-            .then(cache => {
-                console.log('> Service worker cache', cache)
-                return cache.addAll(cacheFiles)
-            })
-    )
+    './lib/bootstrap.min.css',
+    '/manifest.json'
+];
+self.addEventListener('install', async e => {
+    //console.log('> service worker Installed..'); event.waitUntil
+    const cache = await caches.open(cacheName);
+    cache.addAll(cacheFiles);
 })
 
 
-self.addEventListener('activate', (e) => {
-    console.log('> service worker Activated..')
+self.addEventListener('activate', e => {
+    console.log('> service worker Activated..');
     e.waitUntil(
         caches.keys().then(() => Promise.all(cacheFiles.map(c => {
             if (c !== cacheName) {
@@ -36,16 +32,16 @@ self.addEventListener('activate', (e) => {
 })
 
 self.addEventListener('fetch', event => {
-        // Prevent the default, and handle the request ourselves.
-        event.respondWith(async function () {
-            // Try to get the response from a cache.
-            const cachedResponse = await caches.match(event.request);
-            // Return it if we found one.
-            if (cachedResponse) return cachedResponse;
-            // If we didn't find a match in the cache, use the network.
-            return fetch(event.request);
-        }());
-    });
+    const req = event.request;
+    // Prevent the default, and handle the request ourselves.
+    event.respondWith(cacheFirst(req));
+});
+async function cacheFirst(req) {
+    // Try to get the response from a cache.
+    const cachedResponse = await caches.match(req);
+    // Return it if we found one.
+    return cachedResponse || fetch(req);
+} 
     /*
     e.respondWith(
         caches.match(e.request)

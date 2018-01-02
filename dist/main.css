@@ -155,6 +155,11 @@ body {
   z-index: 5;
   min-width: 250px;
   position: relative; }
+  #side-info .for-l-side {
+    width: 0;
+    height: 0;
+    opacity: 0
+  }
   #side-info li {
     padding: 5px 10px;
     font-size: 1.1rem; }
@@ -185,7 +190,6 @@ body {
   #side-info .avatar img {
     border-radius: 50%;
     border: 4px solid #fff;
-    padding: 8px 10px;
     margin: 7px auto 10px;
     box-shadow: 0 4px #fff; }
   #side-info .avatar h3 {
@@ -519,4 +523,11 @@ body {
     -webkit-clip-path: polygon(0% 0%,100% 0%, 100% 100%, 50% 100%, 50% 50%, 0% 50%);
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 100%, 50% 50%, 0% 50%);
     
+}
+@media screen-only {
+  #side-indfo .for-l-side {
+    width: auto;
+    height: auto;
+    opacity: 1
+  }
 }
