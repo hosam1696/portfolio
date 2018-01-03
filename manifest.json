@@ -1,11 +1,11 @@
 {
   "name": "hosam portfoilo page",
-  "short_name": "hosamsam",
-  "theme_color": "#1e1e1e",
-  "background_color": "#23a9ec",
+  "short_name": "H.Elnabawy Portfolio",
+  "theme_color": "#23a9ec",
+  "background_color": "#1e1e1e",
   "display": "standalone",
   "Scope": "/",
-  "start_url": "/",
+  "start_url": ".",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",

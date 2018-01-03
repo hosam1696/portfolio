@@ -92,7 +92,8 @@ body {
           padding: 4px 12px;
           /*border-radius: 4px;*/
           min-width: 100px;
-          cursor: pointer
+          cursor: pointer;
+          outline: none
         }
         #hero-section #cv-btn button a {
           position: absolute;
