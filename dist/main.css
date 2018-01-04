@@ -313,10 +313,20 @@ body {
 #side-info .info .contact {
   margin-bottom: 5px;
 }
+#side-info .info .contact ul.navbar-nav-line {
+  display: flex;
+  justify-content: space-around;
+  padding: 0
+}
+#side-info .info .contact ul li.line {
+  display: inline;
+  font-size: 25px;
+  transition: transform 0.2s linear
+}
 #side-info .info .contact li i {
-      transition: transform 0.5s ease-in-out; }
+      transition: transform 0.2s ease-in-out; }
     #side-info .info .contact li:hover > i {
-      transform: rotate(360deg) scale(1.3);
+      transform:  scale(1.3);
       color: #fff; }
     #side-info .info .contact li a {
       color: #ccc;
@@ -328,7 +338,7 @@ body {
     display: none;
     cursor: pointer
   }    
-      #side-info .info .contact li a:before {
+      #side-info .info .contact li:not(.line) a:before {
         content: '';
         width:104%;
         height: 104%;
@@ -349,6 +359,9 @@ body {
       #side-info .info .contact li a:hover:before {
         transform: scale(1)
       }
+       #side-info .info .contact ul li.line:hover {
+          transform: scale(1.5)
+       }
 
 #work .row .project-col {
   margin-top: 15px;
