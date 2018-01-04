@@ -220,12 +220,12 @@ body {
     padding: 5px 10px;
     font-size: 1.1rem; }
     #side-info li .vertical-sep {
-      margin: -1px 5px;
-      width: 3px;
-      height: 10px;
-      line-height: 3px;
-      border-left: 1px solid #2196F3;
-      display: inline-table; }
+    margin: -1px 2px;
+    
+    height: 10px;
+    line-height: 3px;
+    border-left: 1px solid #2196F3;
+    display: inline-table; }
   #side-info .logo {
     background-color: #03a9f4;
     color: #eee;
@@ -309,9 +309,6 @@ body {
 }
 #side-info .info .statics .lang-stat span:first-of-type {
   margin-left: 20px
-}
-#side-info .info .contact {
-  margin-bottom: 5px;
 }
 #side-info .info .contact ul.navbar-nav-line {
   display: flex;
