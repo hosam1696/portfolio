@@ -7,9 +7,9 @@ const cacheFiles = [
     './index.html',
     './dist/main.css',
     '/dist/main.js',
-    './proj-img.jpg',
-    './hosam.png',
-    './logo.png',
+    './images/proj-img.jpg',
+    './images/h-profile.png',
+    './images/logo.png',
     './lib/bootstrap.min.css',
     '/manifest.json'
 ];

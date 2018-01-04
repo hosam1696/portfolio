@@ -2,6 +2,7 @@ node_modules
 src
 .sass-cache
 .vscode
+*.log
 *.swp
 .idea
 large.hosam.png
