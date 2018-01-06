@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // service worker
-/*
+
 if ('serviceWorker' in navigator) {
 
     navigator.serviceWorker
@@ -33,7 +33,7 @@ if ('serviceWorker' in navigator) {
             console.warn('service worker is failed to register!', err)
         })
 }
-*/
+
 /* web worker
 if (window && window.Worker) {
     let webWorker = new Worker('./ww.js')
