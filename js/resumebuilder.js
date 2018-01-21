@@ -1,26 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const showSide = document.getElementById('l-side')
-    const leftSide = document.getElementById('side-info')
-    const cvBtn = document.getElementById('cv-btn')
-    const cvs = document.querySelectorAll('.cv-down')
-    let cvSlide = true
+    const showSide = document.getElementById('l-side');
+    const leftSide = document.getElementById('side-info');
+    const cvBtn = document.getElementById('cv-btn');
+    const cvs = document.querySelectorAll('.cv-down');
+    let cvSlide = true;
     showSide.addEventListener('click', event => {
-        let checked = event.target.checked
+        let checked = event.target.checked;
         if (checked)
-            leftSide.style.left = 0
+            leftSide.style.left = 0;
         else
-            leftSide.style.left = '-100%'
-    })
+            leftSide.style.left = '-100%';
+    });
     cvBtn.addEventListener('click', event => {
         
         if (event.srcElement.nodeName != 'A') {
             cvs.forEach((cv, i) => {
-                cvSlide?cv.classList.add('slided'):cv.classList.remove('slided')
-            })
-            cvSlide = !cvSlide
+                cvSlide ? cv.classList.add('slided') : cv.classList.remove('slided');
+            });
+            cvSlide = !cvSlide;
         }
         
-    })
+    });
 });
 
 
@@ -30,8 +30,8 @@ if ('serviceWorker' in navigator) {
 
     navigator.serviceWorker
         .register('sw.js', { scope: './' }).catch(err => {
-            console.warn('service worker is failed to register!', err)
-        })
+            console.warn('service worker is failed to register!', err);
+        });
 }
 
 /* web worker
