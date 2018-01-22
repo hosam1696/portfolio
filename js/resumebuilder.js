@@ -4,17 +4,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const cvBtn = document.getElementById("cv-btn");
     const cvs = document.querySelectorAll(".cv-down");
     let cvSlide = true;
-    showSide.addEventListener("click", event => {
+    showSide.addEventListener("click", (event) => {
         let checked = event.target.checked;
-        if (checked)
+        if (checked) {
             leftSide.style.left = 0;
-        else
+        } else {
             leftSide.style.left = "-100%";
+        }
     });
-    cvBtn.addEventListener("click", event => {
+    cvBtn.addEventListener("click", (event) => {
         
-        if (event.srcElement.nodeName != "A") {
-            cvs.forEach((cv, i) => {
+        if (event.srcElement.nodeName !== "A") {
+            cvs.forEach((cv) => {
                 cvSlide ? cv.classList.add("slided") : cv.classList.remove("slided");
             });
             cvSlide = !cvSlide;
@@ -25,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // service worker
-
+/*
 if ("serviceWorker" in navigator) {
 
     navigator.serviceWorker
@@ -33,7 +34,7 @@ if ("serviceWorker" in navigator) {
             console.warn("service worker is failed to register!", err);
         });
 }
-
+*/
 /* web worker
 if (window && window.Worker) {
     let webWorker = new Worker("./ww.js")

@@ -10,3 +10,8 @@ large.logo.png
 *.rar
 *.zip
 hosamsam.*.html
+ css/w.js
+ js/mainbundle.js
+ sw.js
+ webpack.config.js
+ ww.js
