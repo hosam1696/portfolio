@@ -290,7 +290,7 @@ body h1.lead:before {
     height: 10px;
     line-height: 3px;
     border-left: 1px solid #2196F3;
-    display: inline-table;
+    display: inline-flex;
 }
 
 #side-info .logo {
@@ -383,7 +383,7 @@ body h1.lead:before {
 }
 
 #side-info .info .statics .lang-stat span {
-    display: inline-block;
+    display: inline-flex;
     width: 12px;
     height: 24px;
     background: #333;
@@ -409,7 +409,7 @@ body h1.lead:before {
 }
 
 #side-info .info .contact ul li.line {
-    display: inline;
+    display: inline-flex;
     font-size: 25px;
     transition: transform 0.2s linear;
 }
@@ -589,7 +589,7 @@ body h1.lead:before {
     }
 
     #work .row .project-col {
-        display: inline-block;
+        display: flex;
         margin-top: 15px;
         max-width: 50%;
         width: 50%;
