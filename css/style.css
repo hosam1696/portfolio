@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Eagle+Lake);
 
 *::selection {
-    background: #03a9f4;
+    background: #8bcff7;
     color: #fff;
 }
 
@@ -25,7 +25,7 @@
 
 body {
     overflow: hidden;
-    background: #1e1e1e;
+    background: #101f25;
 }
 article {
     font-family: sans-serif;
@@ -97,20 +97,19 @@ body h1.lead:before {
     position: relative;
     height: 400px;
     overflow: hidden;
-    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 90% 100%, 10% 100%, 0% 95%);
-    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 90% 100%, 10% 100%, 0% 95%);
 }
 
 .right-col section#hero-section #canvas {
-    filter: blur(2px) opacity(0.5);
+    filter: blur(2px);
     position: absolute;
-    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAI0lEQVQIW2NkwAT/GdHE/gP5jMiCYAGQIpggXAAmiCIAEgQAAE4FBbECyZcAAAAASUVORK5CYII=) #222;
+    background: #101f25;
     overflow: hidden;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     z-index: 2;
+    box-shadow: 0 110px #101f25;
 }
 
 #hero-section #cv-btn {
@@ -264,7 +263,7 @@ body h1.lead:before {
 }
 
 #side-info {
-    background: #222227;
+    background: #101f25;
     color: #aaa;
     box-shadow: inset -4px 0 #03a9f4, 5px 5px 26px #111;
     padding: 0;
@@ -638,7 +637,7 @@ body h1.lead:before {
     border-radius: 5px;
     line-height: 28px;
     text-align: center;
-    background: linear-gradient(to right, #1e1e1e 5%, #1e1e1e 20%, #1b7bce, #26b5f5 45%, #26b5f5 55%, #1b7bce, #1e1e1e 80%, #1e1e1e 95%);
+    background: linear-gradient(to right, #101f25 5%, #101f25 20%, #1b7bce, #26b5f5 45%, #26b5f5 55%, #1b7bce, #101f25 80%, #101f25 95%);
 }
 
 .background .content {
