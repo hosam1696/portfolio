@@ -1,21 +1,21 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const showSide = document.getElementById('l-side');
-    const leftSide = document.getElementById('side-info');
-    const cvBtn = document.getElementById('cv-btn');
-    const cvs = document.querySelectorAll('.cv-down');
+document.addEventListener("DOMContentLoaded", () => {
+    const showSide = document.getElementById("l-side");
+    const leftSide = document.getElementById("side-info");
+    const cvBtn = document.getElementById("cv-btn");
+    const cvs = document.querySelectorAll(".cv-down");
     let cvSlide = true;
-    showSide.addEventListener('click', event => {
+    showSide.addEventListener("click", event => {
         let checked = event.target.checked;
         if (checked)
             leftSide.style.left = 0;
         else
-            leftSide.style.left = '-100%';
+            leftSide.style.left = "-100%";
     });
-    cvBtn.addEventListener('click', event => {
+    cvBtn.addEventListener("click", event => {
         
-        if (event.srcElement.nodeName != 'A') {
+        if (event.srcElement.nodeName != "A") {
             cvs.forEach((cv, i) => {
-                cvSlide ? cv.classList.add('slided') : cv.classList.remove('slided');
+                cvSlide ? cv.classList.add("slided") : cv.classList.remove("slided");
             });
             cvSlide = !cvSlide;
         }
@@ -26,23 +26,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // service worker
 
-if ('serviceWorker' in navigator) {
+if ("serviceWorker" in navigator) {
 
     navigator.serviceWorker
-        .register('sw.js', { scope: './' }).catch(err => {
-            console.warn('service worker is failed to register!', err);
+        .register("sw.js", { scope: "./" }).catch(err => {
+            console.warn("service worker is failed to register!", err);
         });
 }
 
 /* web worker
 if (window && window.Worker) {
-    let webWorker = new Worker('./ww.js')
+    let webWorker = new Worker("./ww.js")
 
-    webWorker.postMessage('loop 500 times')
+    webWorker.postMessage("loop 500 times")
     webWorker.onmessage = ({ data }) => {
         console.log(data)
 
-        document.getElementsByTagName('h1')[0].innerHTML = data 
+        document.getElementsByTagName("h1")[0].innerHTML = data 
         if (data >= 5000000)
             webWorker.terminate()
             

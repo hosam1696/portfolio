@@ -17,9 +17,9 @@ function rand(min,max) {
 function Particles(){
   //particle colors
   this.colors = [
-    '255, 255, 255',
-    '255, 99, 71',
-    '19, 19, 19'
+    "255, 255, 255",
+    "255, 99, 71",
+    "19, 19, 19"
   ];
   //adds gradient to particles on true
   this.blurry = true;
@@ -39,8 +39,8 @@ function Particles(){
   //number of particles
   this.numParticles = 75;
   //required canvas variables
-  this.canvas = document.getElementById('canvas');
-  this.ctx = this.canvas.getContext('2d');
+  this.canvas = document.getElementById("canvas");
+  this.ctx = this.canvas.getContext("2d");
 }
 
 /**
@@ -75,7 +75,7 @@ Particles.prototype.render = function () {
   self.canvas.width = wWidth;
   self.canvas.height = wHeight;
   
-  window.addEventListener('resize', self.render);
+  window.addEventListener("resize", self.render);
 };
 
 /**
@@ -95,7 +95,7 @@ Particles.prototype.createCircle = function () {
       yPos: self._rand(0, canvas.height),
       xVelocity: self._rand(self.minSpeed, self.maxSpeed),
       yVelocity: self._rand(self.minSpeed, self.maxSpeed),
-      color: 'rgba(' + color + ',' + self._rand(self.minOpacity, self.maxOpacity) + ')'
+      color: "rgba(" + color + "," + self._rand(self.minOpacity, self.maxOpacity) + ")"
     };
     
     //once values are determined, draw particle on canvas
@@ -120,7 +120,7 @@ Particles.prototype.draw = function (particle, i) {
     var grd = ctx.createRadialGradient(particle[i].xPos, particle[i].yPos, particle[i].radius, particle[i].xPos, particle[i].yPos, particle[i].radius / 1.25);
     
     grd.addColorStop(1.000, particle[i].color);
-    grd.addColorStop(0.000, 'rgba(34, 34, 34, 0)');
+    grd.addColorStop(0.000, "rgba(34, 34, 34, 0)");
     ctx.fillStyle = grd;
   } else {
     //otherwise sets to solid color w/ opacity value
@@ -128,7 +128,7 @@ Particles.prototype.draw = function (particle, i) {
   }
   
   if (self.border === true) {
-    ctx.strokeStyle = '#fff';
+    ctx.strokeStyle = "#fff";
     ctx.stroke();
   }
   
