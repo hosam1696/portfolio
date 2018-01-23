@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Eagle+Lake);
 
 *::selection {
-    background: #8bcff7;
+    background: #69c6fc;
     color: #fff;
 }
 
@@ -29,9 +29,10 @@ body {
 }
 article {
     font-family: sans-serif;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     word-spacing: 1px;
     color: #ccc;
+    line-height: 1.6
 }
 body h1.lead {
     font-size: 2.5rem;
@@ -188,6 +189,7 @@ body h1.lead:before {
     align-items: center;
     flex-direction: column;
     text-align: left;
+    box-shadow: inset 0 -25px 25px #101f25;
 }
 
 #hero-section .hero-content .hero-title p {
