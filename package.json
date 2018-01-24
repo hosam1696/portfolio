@@ -4,11 +4,19 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "live:reload": "reload . -p 9661 -b",
+    "live:reload": "reload -d src -p 9661 -b",
     "status": "lighthouse https://hosamsam.github.io/portfolio/",
-    "start" : "npm run live:reload"
+    "start": "npm run live:reload",
+    "webpack": "npx webpack --config webpack.config.js"
   },
   "keywords": [],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "compression-webpack-plugin": "^1.1.3",
+    "css-loader": "^0.28.9",
+    "file-loader": "^1.1.6",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0"
+  }
 }
