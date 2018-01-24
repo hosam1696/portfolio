@@ -3,7 +3,7 @@ const CompressionPlugin = require("compression-webpack-plugin");
 
 module.exports = {
     entry: {
-        main: './src/js/resumebuilder.js'
+        main: './js/resumebuilder.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),

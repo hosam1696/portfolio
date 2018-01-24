@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "live:reload": "reload -d src -p 9661 -b",
+    "live:reload": "reload -p 9661 -b",
     "status": "lighthouse https://hosamsam.github.io/portfolio/",
     "start": "npm run live:reload",
     "webpack": "npx webpack --config webpack.config.js"
