@@ -1,5 +1,3 @@
-import '../css/bootstrap.min.css';   
-import '../css/style.css';
 import './helper';
 
 const showSide = document.getElementById("l-side");
@@ -9,7 +7,6 @@ const cvs = document.querySelectorAll(".cv-down");
 let cvSlide = true;
 showSide.addEventListener("click", (event) => {
     let checked = event.target.checked;
-    console.log(checked);
     if (checked) {
         leftSide.style.left = 0;
     } else {
