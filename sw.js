@@ -1,11 +1,12 @@
 // service-worker.js file
 
 
-const cacheName = 'cache assets';
+const cacheName = 'cachedassets';
 const cacheFiles = [
     '/',
     './index.html',
     './css/style.css',
+    './css/bootstrap.min.css',
     './images/proj-img.jpg',
     './images/h-profile.png',
     './images/logo.png',
