@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let cvSlide = true;
     showSide.addEventListener("click", (event) => {
         let checked = event.target.checked;
+        console.log(checked);
         if (checked) {
             leftSide.style.left = 0;
         } else {

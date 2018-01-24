@@ -4,12 +4,12 @@
 const cacheName = 'cache assets';
 const cacheFiles = [
     '/',
-    './src/index.html',
-    './src/css/style.css',
-    './src/images/proj-img.jpg',
-    './src/images/h-profile.png',
-    './src/images/logo.png',
-    '../dist/mainapp.js'
+    './index.html',
+    './css/style.css',
+    './images/proj-img.jpg',
+    './images/h-profile.png',
+    './images/logo.png',
+    './dist/mainapp.js'
 ];
 self.addEventListener('install', async e => {
     //console.log('> service worker Installed..'); event.waitUntil
