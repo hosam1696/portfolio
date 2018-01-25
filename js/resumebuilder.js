@@ -17,7 +17,7 @@ cvBtn.addEventListener("click", (event) => {
     
     if (event.srcElement.nodeName !== "A") {
         cvs.forEach((cv) => {
-            cvSlide ? cv.classList.add("slided") : cv.classList.remove("slided");
+            cvSlide ? cv.classList.add("slided") : cv.classList.remove("slided");    
         });
         cvSlide = !cvSlide;
     }
