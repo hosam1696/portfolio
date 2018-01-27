@@ -1,8 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Eagle+Lake);
-
 * {
     box-sizing: border-box;
+    will-change: transform
 }
+
 *::selection {
     background: #69c6fc;
     color: #fff;
@@ -25,14 +26,16 @@ body {
     margin: 0;
     font-family: sans-serif;
 }
+
 ul {
-    margin:0;
+    margin: 0;
     padding: 0
 }
+
 ul li {
     list-style: none;
-
 }
+
 #side-info,
 #side-info .info,
 #work .project-col .project {
@@ -47,6 +50,7 @@ article {
     color: #ccc;
     line-height: 1.6
 }
+
 body h1.lead {
     font-size: 2.5rem;
     color: #fff;
@@ -114,7 +118,6 @@ body h1.lead:before {
 }
 
 .right-col section#hero-section #canvas {
-    filter: blur(2px);
     position: absolute;
     background: #101f25;
     overflow: hidden;
@@ -126,6 +129,21 @@ body h1.lead:before {
     box-shadow: 0 110px #101f25;
 }
 
+.right-col section#hero-section #canvas .objects {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.objects>div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #066074;
+    filter: blur(10px)
+}
+
 #hero-section #cv-btn {
     display: flex;
     position: absolute;
@@ -134,7 +152,7 @@ body h1.lead:before {
     z-index: 99;
 }
 
-#hero-section #cv-btn button {
+#hero-section #cv-btn a {
     position: relative;
     background: linear-gradient(#18b0f7, #18b0f7 50%, #03a9f4 50%);
     border: none;
@@ -147,9 +165,10 @@ body h1.lead:before {
     justify-content: center;
     align-items: center;
     outline: none;
+    text-decoration: none
 }
 
-#hero-section #cv-btn button svg {
+#hero-section #cv-btn a svg {
     padding-left: 5px
 }
 
@@ -218,19 +237,18 @@ body h1.lead:before {
 }
 
 #hero-section .hero-content .hero-title p {
-    font-family: "Eagle Lake", cursive, sans-serif;
     font-weight: normal;
     color: #ccc;
 }
 
 .right-col section#hero-section .hero-content a {
-        margin-top: -5px;
-        color: #555;
-        text-decoration: none;
-        z-index: 6;
-        display: flex;
-        text-transform: capitalize;
-        flex-direction: row-reverse;
+    margin-top: -5px;
+    color: #555;
+    text-decoration: none;
+    z-index: 6;
+    display: flex;
+    text-transform: capitalize;
+    flex-direction: row-reverse;
 }
 
 .right-col section#hero-section .hero-content h1 {
@@ -304,7 +322,8 @@ body h1.lead:before {
     position: relative;
 }
 
-#side-info .for-l-side {
+.for-l-side {
+    position: fixed;
     width: 0;
     height: 0;
     opacity: 0;
@@ -316,7 +335,7 @@ body h1.lead:before {
 }
 
 #side-info li .vertical-sep {
-    margin: -1px 2px;
+    margin: -1px 5px;
     height: 10px;
     line-height: 3px;
     border-left: 1px solid #2196F3;
@@ -347,11 +366,13 @@ body h1.lead:before {
 #side-info .logo .toggle-side.toggeled {
     transform: rotate(0);
 }
+
 #side-info .avatar {
     display: flex;
     justify-content: center;
     flex-direction: column
 }
+
 #side-info .avatar img {
     border-radius: 50%;
     margin: 7px auto 10px;
@@ -413,7 +434,7 @@ body h1.lead:before {
     margin-bottom: 0.3rem;
 }
 
-#side-info .info .statics .lang-stat:hover > span.filled {
+#side-info .info .statics .lang-stat:hover>span.filled {
     background: #cccbcb;
     box-shadow: 3px 3px #141414;
 }
@@ -424,7 +445,7 @@ body h1.lead:before {
     height: 24px;
     background: #333;
     transform: skew(-25deg);
-    margin: 5px 2px;
+    margin: 5px 4px;
     border-radius: 2px;
     box-shadow: 2px 2px #141414;
 }
@@ -437,11 +458,17 @@ body h1.lead:before {
 #side-info .info .statics .lang-stat span:first-of-type {
     margin-left: 20px;
 }
-#side-info .info .contact ul.navbar-nav li svg{
+
+#side-info .info .contact {
+    flex: 1
+}
+
+#side-info .info .contact ul.navbar-nav li svg {
     width: 18px;
     vertical-align: middle;
     margin-top: -4px
 }
+
 #side-info .info .contact ul.navbar-nav-line {
     display: flex;
     justify-content: space-around;
@@ -453,17 +480,19 @@ body h1.lead:before {
     font-size: 25px;
     transition: transform 0.2s linear;
 }
-#side-info .info .contact ul li.line a svg, #side-info .info .contact ul li svg {
+
+#side-info .info .contact ul li.line a svg,
+#side-info .info .contact ul li svg {
     width: 22px;
     fill: #ccc;
     transition: fill 0.2s ease;
 }
+
 #side-info .info .contact li i {
     transition: transform 0.2s ease-in-out;
 }
 
-#side-info .info .contact li:hover > svg {
-    
+#side-info .info .contact li:hover>svg {
     fill: #fff;
 }
 
@@ -474,7 +503,7 @@ body h1.lead:before {
     z-index: 8;
 }
 
-#side-info .show-side {
+.show-side {
     display: none;
     cursor: pointer;
 }
@@ -579,9 +608,11 @@ body h1.lead:before {
     fill: #ccc;
     font-size: 2.3rem
 }
+
 #work .project-col .project .project-btns a svg:hover {
     fill: #f4f4f4
 }
+
 #work .project-col .project .project-btns .btn {
     border-radius: 0;
 }
@@ -596,58 +627,52 @@ body h1.lead:before {
     #hero-section .hero-content .hero-title {
         transform: scale(0.8);
     }
-
     #side-info {
         position: absolute;
         left: -100%;
         transition: left 0.25s linear;
     }
-
-    #side-info .show-side {
+    .show-side {
         display: flex;
         position: fixed;
-        width: 200px;
+        /* width: 200px; */
         top: 50%;
         left: 0;
+        height: 20px;
+        z-index: 99;
         height: 0;
     }
-
-    #side-info .show-side:checked:before {
+    .show-side:checked:before {
         left: 220px;
-        padding-left: 0;
+        padding: 0 20px;
     }
-
-    #side-info .show-side:before {
-        will-change: auto;
+    .show-side:before {
         content: "||";
         color: #ffffff;
         justify-content: center;
-        line-height: 50px;
+        line-height: 55px;
         position: relative;
         display: flex;
         width: 50px;
-        height: 50px;
+        height: 55px;
         box-sizing: border-box;
-        padding-left: 18px;
+        padding: 0 7px 0 23px;
         font-size: 26px;
         background: #03a9f4;
         border-radius: 50%;
         top: 50%;
-        left: -30px;
+        left: -25px;
         transition: left linear 0.25s;
     }
-
     #work .row .project-col {
         display: flex;
         margin-top: 15px;
         max-width: 50%;
         width: 50%;
     }
-
-    #skills ul {
-        padding-left: 10px
+    #skills li {
+        color: #ccc;
     }
-
     #skills ul li i {
         font-size: 10px;
     }
@@ -658,18 +683,16 @@ body h1.lead:before {
         display: flex;
         flex-flow: wrap;
     }
-
     #work .project-col {
         width: 50%;
         min-width: 50%;
     }
-
     #work .row .project-col {
         margin-top: 15px;
         max-width: 33%;
         width: 33%;
     }
-     .row {
+    .row {
         display: flex
     }
     #side-info {
@@ -677,7 +700,6 @@ body h1.lead:before {
     }
     .right-col {
         width: 80%;
-        max-width:auto
     }
 }
 
@@ -744,7 +766,7 @@ body h1.lead:before {
 }
 
 @media screen-only {
-    #side-info .for-l-side {
+    .for-l-side {
         width: auto;
         height: auto;
         opacity: 1;

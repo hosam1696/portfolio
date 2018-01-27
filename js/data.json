@@ -1,0 +1,147 @@
+{
+    "bio": {
+        "name": "Hosam Elnabawy Ahmed",
+        "role": "FULL STACK JAVACSRIPT Developer",
+        "imgPath" : "./images/h-profile.png",
+        "mobile": "+201201914918",
+        "contacts": {
+            "primary_email": "hossam216921@eng.zu.edu.eg",
+            "secondary_email": "hosamelnabawy@outlook.com",
+            "github": "https://github.com/hosamsam",
+            "codepen": "http://codepen.io/hosamsam/",
+            "twitter": "https://twitter.com/hosam1696",
+            "linkedIn": "https://www.linkedin.com/in/hosamsam/"
+        },
+        "technologies": [
+            {
+                "name": "Javascript",
+                "rank": 9
+            },
+            {
+                "name": "Ionic",
+                "rank": 8
+            },
+            {
+                "name": "Angular",
+                "rank": 9
+            },
+            {
+                "name": "Nodejs",
+                "rank": 8
+            }
+        ]
+    },
+    "education": {
+        "schools": [
+            {
+                "name": "",
+                "location": "",
+                "degree": "",
+                "major": "",
+                "date": ""
+            }
+        ],
+        "onlineCourses": [
+            {
+                "title": "",
+                "school": "",
+                "dates": "",
+                "url": ""
+            }
+        ],
+        "display": ""
+    },
+    "work": {
+        "jobs": [
+            {
+                "employer": "",
+                "title": "",
+                "dates": "",
+                "dexcription": ""
+            }
+        ],
+        "display": ""
+    },
+    "projects": [
+        {
+            "title": "Matager App",
+            "dates": "2017",
+            "description": "Mobile App to facilate dealing with stores and exporters",
+            "images": "proj-img.jpg",
+            "links": {
+                "github": "https://github.com/hosamsam/matagerApp"
+            }
+        },
+        {
+            "title": "Bawaba App",
+            "dates": "2017",
+            "description": "Mobile App let students book travel tickets",
+            "images": "proj-img.jpg",
+            "links": {
+                "github": "https://github.com/hosamsam/bawabaApp",
+                "web": "https://itunes.apple.com/us/app/%D8%A8%D9%88%D8%A7%D8%A8%D8%A9-%D8%A7%D9%84%D9%86%D9%82%D9%84/id1110646052?ls=1&mt=8"
+            }
+        },
+        {
+            "title": "Ubzil App",
+            "dates": "2017",
+            "description": "Mobile App to connect services providers to who need it",
+            "images": "proj-img.jpg",
+            "links": {
+                "github": "https://github.com/hosamsam/UbzilApp"
+            }
+        },
+        {
+            "title": "Roax Academy Website",
+            "dates": "2017",
+            "description": "website to let people chat and learn together",
+            "images": "proj-img.jpg",
+            "links": {
+                "github": "https://github.com/hosamsam/RoaxAcademy-express",
+                "web": "https://pure-ravine-76563.herokuapp.com/"
+            }
+        },
+        {
+            "title": "Ecoomerce Angular2",
+            "dates": "2017",
+            "description": "website built by Angular ang hosted on github",
+            "images": "proj-img.jpg",
+            "links": {
+                "github": "https://github.com/hosamsam/e-commerce-angular",
+                "web": "https://hosamsam.github.io/e-commerce-angular"
+            }
+        },
+        {
+            "title": "Landing Page",
+            "dates": "2017",
+            "description": "responsive one page HTML and CSS for resturants",
+            "images": "proj-img.jpg",
+            "links": {
+                "github": "https://github.com/hosamsam/omnifood",
+                "web": "https://hosamsam.github.io/omnifood/resources/"
+            }
+        },
+        {
+            "title": "Travel Template",
+            "dates": "2017",
+            "description": "Responsive website ",
+            "images": "proj-img.jpg",
+            "links": {
+                "github": "https://github.com/hosamsam/hsa-travel",
+                "web": "https://hosamsam.github.io/hsa-travel/"
+            }
+        }
+    ],
+    "skills": [
+        "web programming languages and tools like HTML5, CSS3, JAVSCRIPT",
+        "SCSS as css preprocessor language and Bootstrap as style framework",
+        "Javacsript OOP & FB",
+        "Angular (4) as MVC framework",
+        "Ionic (3) as a framework to build hybrid mobile apps",
+        "Typescript",
+        "NODEJS & ExpressJs as a server side frameworks",
+        "Linux Bash shell and windows command line",
+        "Good communication English skills in programming and real",
+        "GIT and GitHub as version control system managements"
+    ]
+}
