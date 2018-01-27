@@ -1,4 +1,4 @@
-import './helper';
+//import './helper';
 
 const showSide = document.getElementById("l-side");
 const leftSide = document.getElementById("side-info");
