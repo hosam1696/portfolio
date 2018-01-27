@@ -33,7 +33,7 @@ $(() => {
 
     projectHolder.append(function () {
         let projectData = resumeData.projects;
-        return projectData.map(project=>{
+        return projectData.map(project => {
             return `\
             <div class="col project-col">
                 <div class="project">
@@ -44,8 +44,8 @@ $(() => {
                         ${getAllIcons(project.links)}
                     </div>
                 </div>
-            </div>`
-        }).join('')
+            </div>`;
+        }).join('');
     });
 
     //TODO: structure the markup of Bio to be the items to load
@@ -61,12 +61,12 @@ $(() => {
         let blockList  = $('<ul class="navbar-nav"></ul>');
         for (let [key, url] of Object.entries(resumeData.bio.contacts)) {
             if (key === 'primary_email' || key === 'secondary_email') {
-                blockList.append(`<li>${getSvgIcon(key)}<span class="vertical-sep"></span><a href="mailto:${url}">${url}</a></li>`)
+                blockList.append(`<li>${getSvgIcon(key)}<span class="vertical-sep"></span><a href="mailto:${url}">${url}</a></li>`);
             } else {
-                inlineList.append(`<li class="line"><a href="${url}" target="noopener">${getSvgIcon(key)}</a></li>`)
+                inlineList.append(`<li class="line"><a href="${url}" target="noopener">${getSvgIcon(key)}</a></li>`);
             }
         }
-        contactsSection.append(blockList, inlineList)
+        contactsSection.append(blockList, inlineList);
     })();
 
     // drag the left side pane to the right

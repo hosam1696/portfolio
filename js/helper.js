@@ -9,7 +9,7 @@ export function getSvgIcon(name) {
         case 'secondary_email':
             return `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><path d="M32.3,10v980V10z"/><path d="M54.5,10v980V10z"/><path d="M76.8,10v980V10z"/><path d="M99.1,10v980V10z"/><path d="M121.4,10v980V10z"/><path d="M143.6,10v980V10z"/><path d="M165.9,10v980V10z"/><path d="M188.2,10v980V10z"/><path d="M210.5,10v980V10z"/><path d="M232.7,10v980V10z"/><path d="M255,10v980V10z"/><path d="M277.3,10v980V10z"/><path d="M299.5,10v980V10z"/><path d="M321.8,10v980V10z"/><path d="M344.1,10v980V10z"/><path d="M366.4,10v980V10z"/><path d="M388.6,10v980V10z"/><path d="M410.9,10v980V10z"/><path d="M433.2,10v980V10z"/><path d="M455.5,10v980V10z"/><path d="M477.7,10v980V10z"/><path d="M500,10v980V10z"/><path d="M522.3,10v980V10z"/><path d="M544.5,10v980V10z"/><path d="M566.8,10v980V10z"/><path d="M589.1,10v980V10z"/><path d="M611.4,10v980V10z"/><path d="M633.6,10v980V10z"/><path d="M655.9,10v980V10z"/><path d="M678.2,10v980V10z"/><path d="M700.5,10v980V10z"/><path d="M722.7,10v980V10z"/><path d="M745,10v980V10z"/><path d="M767.3,10v980V10z"/><path d="M789.5,10v980V10z"/><path d="M811.8,10v980V10z"/><path d="M834.1,10v980V10z"/><path d="M856.4,10v980V10z"/><path d="M878.6,10v980V10z"/><path d="M900.9,10v980V10z"/><path d="M923.2,10v980V10z"/><path d="M945.5,10v980V10z"/><path d="M967.7,10v980V10z"/><path d="M10,32.3h980H10z"/><path d="M10,54.5h980H10z"/><path d="M10,76.8h980H10z"/><path d="M10,99.1h980H10z"/><path d="M10,121.4h980H10z"/><path d="M10,143.6h980H10z"/><path d="M10,165.9h980H10z"/><path d="M10,188.2h980H10z"/><path d="M10,210.5h980H10z"/><path d="M10,232.7h980H10z"/><path d="M10,255h980H10z"/><path d="M10,277.3h980H10z"/><path d="M10,299.5h980H10z"/><path d="M10,321.8h980H10z"/><path d="M10,344.1h980H10z"/><path d="M10,366.4h980H10z"/><path d="M10,388.6h980H10z"/><path d="M10,410.9h980H10z"/><path d="M10,433.2h980H10z"/><path d="M10,455.5h980H10z"/><path d="M10,477.7h980H10z"/><path d="M10,500h980H10z"/><path d="M10,522.3h980H10z"/><path d="M10,544.5h980H10z"/><path d="M10,566.8h980H10z"/><path d="M10,589.1h980H10z"/><path d="M10,611.4h980H10z"/><path d="M10,633.6h980H10z"/><path d="M10,655.9h980H10z"/><path d="M10,678.2h980H10z"/><path d="M10,700.5h980H10z"/><path d="M10,722.7h980H10z"/><path d="M10,745h980H10z"/><path d="M10,767.3h980H10z"/><path d="M10,789.5h980H10z"/><path d="M10,811.8h980H10z"/><path d="M10,834.1h980H10z"/><path d="M10,856.4h980H10z"/><path d="M10,878.6h980H10z"/><path d="M10,900.9h980H10z"/><path d="M10,923.2h980H10z"/><path d="M10,945.5h980H10z"/><path d="M10,967.7h980H10z"/><path d="M900.9,856.4H99.1c-49.2,0-89.1-39.9-89.1-89.1V232.7c0-49.2,39.9-89.1,89.1-89.1h801.8c49.2,0,89.1,39.9,89.1,89.1v534.5C990,816.5,950.1,856.4,900.9,856.4L900.9,856.4z M856.4,767.3L601,543.8l-101,89.8l-101-89.8L143.6,767.3H856.4z M99.1,722.7L349.7,500L99.1,277.3V722.7z M143.6,232.7L500,544.5l356.4-311.8H143.6z M900.9,277.3L650.3,500l250.6,222.7V277.3z"/></g></svg>`;
         case 'linkedIn':
-            return `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000"enable-background="new 0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><g> <path fill="#ddd" d="M825.4,10H174.6C84.1,10,10,84.1,10,174.6v650.8C10,915.9,84.1,990,174.6,990h650.8c90.5,0,164.6-74.1,164.6-164.6V174.6C990,84.1,915.9,10,825.4,10z M377.5,806.3H255V377.5h122.5V806.3z M316.3,316.3c-33.8,0-61.3-27.4-61.3-61.3s27.4-61.3,61.3-61.3s61.3,27.4,61.3,61.3S350.1,316.3,316.3,316.3z M806.3,806.3H683.8v-245c0-33.8-27.4-61.3-61.3-61.3s-61.3,27.4-61.3,61.3v245H438.8V377.5h122.5v76.1c25.3-34.7,63.9-76.1,107.2-76.1c76.1,0,137.8,68.6,137.8,153.1V806.3z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></g></svg>`
+            return `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000"enable-background="new 0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><g> <path fill="#ddd" d="M825.4,10H174.6C84.1,10,10,84.1,10,174.6v650.8C10,915.9,84.1,990,174.6,990h650.8c90.5,0,164.6-74.1,164.6-164.6V174.6C990,84.1,915.9,10,825.4,10z M377.5,806.3H255V377.5h122.5V806.3z M316.3,316.3c-33.8,0-61.3-27.4-61.3-61.3s27.4-61.3,61.3-61.3s61.3,27.4,61.3,61.3S350.1,316.3,316.3,316.3z M806.3,806.3H683.8v-245c0-33.8-27.4-61.3-61.3-61.3s-61.3,27.4-61.3,61.3v245H438.8V377.5h122.5v76.1c25.3-34.7,63.9-76.1,107.2-76.1c76.1,0,137.8,68.6,137.8,153.1V806.3z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></g></svg>`;
         case 'twitter':
             return `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><path d="M989.9,282c-0.2-15.6-0.3-22-0.4-29.4c-0.4-22-1.8-44.2-5.6-64.1c-4.1-21.6-9.6-41.3-19.6-61.1c-10.1-20-24-37.2-39-52.6c-15.4-15-32.7-28.9-52.6-39c-19.7-10-39.3-15.5-61.1-19.6c-19.9-3.7-42.1-5.2-64.1-5.6c-7.4-0.1-13.8-0.2-29.4-0.4C703.1,10.1,691,10,682,10c-45.6,0-318.3,0-364,0c-9,0-21.2,0.1-36,0.2c-15.6,0.2-22,0.3-29.4,0.4c-22,0.4-44.2,1.8-64.1,5.6c-21.6,4.1-41.3,9.6-61.1,19.6c-20,10.1-37.2,24-52.6,39c-15,15.4-28.9,32.7-39,52.6c-10,19.7-15.5,39.3-19.6,61.1c-3.7,19.9-5.2,42.1-5.6,64.1c-0.1,7.4-0.2,13.8-0.4,29.4c-0.1,14.9-0.2,27.1-0.2,36.1v364c0,9,0.1,21.2,0.2,36c0.2,15.6,0.3,22,0.4,29.4c0.4,22,1.8,44.2,5.6,64.1c4.1,21.6,9.6,41.3,19.6,61.1c10.1,20,24,37.2,39,52.6c15.4,15,32.7,28.9,52.6,39c19.7,10,39.3,15.5,61.1,19.6c19.9,3.7,42.1,5.2,64.1,5.6c7.4,0.1,13.8,0.2,29.4,0.4c14.8,0.1,27,0.2,36,0.2c45.6,0,318.3,0,364,0c9,0,21.2-0.1,36-0.2c15.6-0.2,22-0.3,29.4-0.4c22-0.4,44.2-1.8,64.1-5.6c21.6-4.1,41.3-9.6,61.1-19.6c20-10.1,37.2-24,52.6-39c15-15.4,28.9-32.7,39-52.6c10-19.7,15.5-39.3,19.6-61.1c3.7-19.9,5.2-42.1,5.6-64.1c0.1-7.4,0.2-13.8,0.4-29.4c0.1-14.8,0.2-27,0.2-36v-364C990.1,309.1,990,296.9,989.9,282z M782.4,357.7c-3.3,246.3-160.8,415-395.9,425.6c-97,4.4-167.2-26.9-228.4-65.8c71.7,11.5,160.5-17.2,208.1-57.9c-70.3-6.9-111.8-42.6-131.3-100.1c20.3,3.5,41.6,2.6,61-1.5c-63.4-21.2-108.6-60.4-111-142.5c17.8,8.1,36.4,15.7,61,17.2c-47.5-27-82.5-125.6-42.3-190.8c70.4,77.2,155.1,140.2,294.2,148.7c-34.9-149.2,162.9-230.2,245.6-129.9c35-6.8,63.5-20,90.8-34.5c-11.3,34.6-33,58.9-59.4,78.3c29.1-3.9,54.7-11,76.8-21.9C837.9,310.9,808,336.3,782.4,357.7z"/></g></svg>`;
         case 'codepen':
@@ -22,7 +22,7 @@ export function getSvgIcon(name) {
 export function getAllIcons(iconsObj) {
     return Object.keys(iconsObj)
         .map(key=>`\<a class="btn-anc" target="noopener" href="${iconsObj[key]}">${getSvgIcon(key)}</a>`)
-        .join('')
+        .join('');
 }
 
 export function  markupBio(selector, data) {
@@ -31,8 +31,7 @@ export function  markupBio(selector, data) {
             <h3 class="lead">${data.name}
             <br>
             <span>${data.role}</span>
-        </h3>
-        `)
+        </h3>`);
 }
 
 function statsHTML(data) {
@@ -40,18 +39,18 @@ function statsHTML(data) {
     function fill(num) {
         let rankHTML = '';
         for (let i= 1;i<=10;i++) {
-            rankHTML += num>=i?'<span class="filled"></span>':'<span></span>'
+            rankHTML += num>=i?'<span class="filled"></span>':'<span></span>';
         }
-        return rankHTML
+        return rankHTML;
     }
     return data.map(t=>`<div class="lang-stat">
                 <p>${t.name}</p>
                 ${fill(t.rank)}
-            </div>`).join('')
+            </div>`).join('');
 }
 
 export function markupStatus (selector, data) {
 
-    selector.append(statsHTML(data))
+    selector.append(statsHTML(data));
 }
 
