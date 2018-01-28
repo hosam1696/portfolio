@@ -382,7 +382,9 @@ body h1.lead:before {
 #side-info .avatar h3 {
     position: relative;
     text-align: center;
-    font-weight: normal
+    font-weight: normal;
+    font-size: 20px;
+    margin-top: 6px;
 }
 
 #side-info .avatar h3:after {
