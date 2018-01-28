@@ -71,9 +71,9 @@
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__data__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__helper__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__helper__ = __webpack_require__(3);
 
 
 
@@ -109,7 +109,7 @@ __WEBPACK_IMPORTED_MODULE_0_jquery__(() => {
 
     projectHolder.append(function () {
         let projectData = __WEBPACK_IMPORTED_MODULE_1__data__["projects"];
-        return projectData.map(project=>{
+        return projectData.map(project => {
             return `\
             <div class="col project-col">
                 <div class="project">
@@ -120,8 +120,8 @@ __WEBPACK_IMPORTED_MODULE_0_jquery__(() => {
                         ${Object(__WEBPACK_IMPORTED_MODULE_2__helper__["a" /* getAllIcons */])(project.links)}
                     </div>
                 </div>
-            </div>`
-        }).join('')
+            </div>`;
+        }).join('');
     });
 
     //TODO: structure the markup of Bio to be the items to load
@@ -137,12 +137,12 @@ __WEBPACK_IMPORTED_MODULE_0_jquery__(() => {
         let blockList  = __WEBPACK_IMPORTED_MODULE_0_jquery__('<ul class="navbar-nav"></ul>');
         for (let [key, url] of Object.entries(__WEBPACK_IMPORTED_MODULE_1__data__["bio"].contacts)) {
             if (key === 'primary_email' || key === 'secondary_email') {
-                blockList.append(`<li>${Object(__WEBPACK_IMPORTED_MODULE_2__helper__["b" /* getSvgIcon */])(key)}<span class="vertical-sep"></span><a href="mailto:${url}">${url}</a></li>`)
+                blockList.append(`<li>${Object(__WEBPACK_IMPORTED_MODULE_2__helper__["b" /* getSvgIcon */])(key)}<span class="vertical-sep"></span><a href="mailto:${url}">${url}</a></li>`);
             } else {
-                inlineList.append(`<li class="line"><a href="${url}" target="noopener">${Object(__WEBPACK_IMPORTED_MODULE_2__helper__["b" /* getSvgIcon */])(key)}</a></li>`)
+                inlineList.append(`<li class="line"><a href="${url}" target="noopener">${Object(__WEBPACK_IMPORTED_MODULE_2__helper__["b" /* getSvgIcon */])(key)}</a></li>`);
             }
         }
-        contactsSection.append(blockList, inlineList)
+        contactsSection.append(blockList, inlineList);
     })();
 
     // drag the left side pane to the right
@@ -174,10 +174,33 @@ __WEBPACK_IMPORTED_MODULE_0_jquery__(() => {
         objectsDiv.append(div);
     });
 
+
+      
 });
 
 
+google.maps.event.addDomListener(window, 'load', init);
 
+function init() {
+    let mapOptions = {
+        zoom: 11,
+
+        center: new google.maps.LatLng(30.026510, 31.211858), // Cairo
+
+        styles: [{ "featureType": "all", "elementType": "all", "stylers": [{ "visibility": "on" }] }, { "featureType": "all", "elementType": "labels", "stylers": [{ "visibility": "off" }, { "saturation": "-100" }] }, { "featureType": "all", "elementType": "labels.text.fill", "stylers": [{ "saturation": 36 }, { "color": "#000000" }, { "lightness": 40 }, { "visibility": "off" }] }, { "featureType": "all", "elementType": "labels.text.stroke", "stylers": [{ "visibility": "off" }, { "color": "#000000" }, { "lightness": 16 }] }, { "featureType": "all", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "administrative", "elementType": "geometry.fill", "stylers": [{ "color": "#000000" }, { "lightness": 20 }] }, { "featureType": "administrative", "elementType": "geometry.stroke", "stylers": [{ "color": "#000000" }, { "lightness": 17 }, { "weight": 1.2 }] }, { "featureType": "landscape", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 20 }] }, { "featureType": "landscape", "elementType": "geometry.fill", "stylers": [{ "color": "#4d6059" }] }, { "featureType": "landscape", "elementType": "geometry.stroke", "stylers": [{ "color": "#4d6059" }] }, { "featureType": "landscape.natural", "elementType": "geometry.fill", "stylers": [{ "color": "#4d6059" }] }, { "featureType": "poi", "elementType": "geometry", "stylers": [{ "lightness": 21 }] }, { "featureType": "poi", "elementType": "geometry.fill", "stylers": [{ "color": "#4d6059" }] }, { "featureType": "poi", "elementType": "geometry.stroke", "stylers": [{ "color": "#4d6059" }] }, { "featureType": "road", "elementType": "geometry", "stylers": [{ "visibility": "on" }, { "color": "#7f8d89" }] }, { "featureType": "road", "elementType": "geometry.fill", "stylers": [{ "color": "#7f8d89" }] }, { "featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{ "color": "#7f8d89" }, { "lightness": 17 }] }, { "featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [{ "color": "#7f8d89" }, { "lightness": 29 }, { "weight": 0.2 }] }, { "featureType": "road.arterial", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 18 }] }, { "featureType": "road.arterial", "elementType": "geometry.fill", "stylers": [{ "color": "#7f8d89" }] }, { "featureType": "road.arterial", "elementType": "geometry.stroke", "stylers": [{ "color": "#7f8d89" }] }, { "featureType": "road.local", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 16 }] }, { "featureType": "road.local", "elementType": "geometry.fill", "stylers": [{ "color": "#7f8d89" }] }, { "featureType": "road.local", "elementType": "geometry.stroke", "stylers": [{ "color": "#7f8d89" }] }, { "featureType": "transit", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 19 }] }, { "featureType": "water", "elementType": "all", "stylers": [{ "color": "#2b3638" }, { "visibility": "on" }] }, { "featureType": "water", "elementType": "geometry", "stylers": [{ "color": "#2b3638" }, { "lightness": 17 }] }, { "featureType": "water", "elementType": "geometry.fill", "stylers": [{ "color": "#24282b" }] }, { "featureType": "water", "elementType": "geometry.stroke", "stylers": [{ "color": "#24282b" }] }, { "featureType": "water", "elementType": "labels", "stylers": [{ "visibility": "off" }] }, { "featureType": "water", "elementType": "labels.text", "stylers": [{ "visibility": "off" }] }, { "featureType": "water", "elementType": "labels.text.fill", "stylers": [{ "visibility": "off" }] }, { "featureType": "water", "elementType": "labels.text.stroke", "stylers": [{ "visibility": "off" }] }, { "featureType": "water", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }]
+    };
+
+    let mapElement = document.getElementById('mapDiv');
+
+    let map = new google.maps.Map(mapElement, mapOptions);
+
+    let marker = new google.maps.Marker({
+        position: new google.maps.LatLng(40.6700, -73.9400),
+        map: map,
+        title: 'Home!'
+    });
+}
+    
 
 
 if ("serviceWorker" in navigator) {
@@ -10581,6 +10604,12 @@ return jQuery;
 
 /***/ }),
 /* 2 */
+/***/ (function(module, exports) {
+
+module.exports = {"bio":{"name":"Hosam Elnabawy Ahmed","role":"FULL STACK JAVACSRIPT Developer","imgPath":"./images/h-profile.png","mobile":"+201201914918","contacts":{"primary_email":"hossam216921@eng.zu.edu.eg","secondary_email":"hosamelnabawy@outlook.com","github":"https://github.com/hosamsam","codepen":"http://codepen.io/hosamsam/","twitter":"https://twitter.com/hosam1696","linkedIn":"https://www.linkedin.com/in/hosamsam/"},"technologies":[{"name":"Javascript","rank":9},{"name":"Ionic","rank":8},{"name":"Angular","rank":9},{"name":"Nodejs","rank":8}]},"education":{"schools":[{"name":"","location":"","degree":"","major":"","date":""}],"onlineCourses":[{"title":"","school":"","dates":"","url":""}],"display":""},"work":{"jobs":[{"employer":"","title":"","dates":"","dexcription":""}],"display":""},"projects":[{"title":"Matager App","dates":"2017","description":"Mobile App to facilate dealing with stores and exporters","images":"proj-img.jpg","links":{"github":"https://github.com/hosamsam/matagerApp"}},{"title":"Bawaba App","dates":"2017","description":"Mobile App let students book travel tickets","images":"proj-img.jpg","links":{"github":"https://github.com/hosamsam/bawabaApp","web":"https://itunes.apple.com/us/app/%D8%A8%D9%88%D8%A7%D8%A8%D8%A9-%D8%A7%D9%84%D9%86%D9%82%D9%84/id1110646052?ls=1&mt=8"}},{"title":"Ubzil App","dates":"2017","description":"Mobile App to connect services providers to who need it","images":"proj-img.jpg","links":{"github":"https://github.com/hosamsam/UbzilApp"}},{"title":"Roax Academy Website","dates":"2017","description":"website to let people chat and learn together","images":"proj-img.jpg","links":{"github":"https://github.com/hosamsam/RoaxAcademy-express","web":"https://pure-ravine-76563.herokuapp.com/"}},{"title":"Ecoomerce Angular2","dates":"2017","description":"website built by Angular ang hosted on github","images":"proj-img.jpg","links":{"github":"https://github.com/hosamsam/e-commerce-angular","web":"https://hosamsam.github.io/e-commerce-angular"}},{"title":"Landing Page","dates":"2017","description":"responsive one page HTML and CSS for resturants","images":"proj-img.jpg","links":{"github":"https://github.com/hosamsam/omnifood","web":"https://hosamsam.github.io/omnifood/resources/"}},{"title":"Travel Template","dates":"2017","description":"Responsive website ","images":"proj-img.jpg","links":{"github":"https://github.com/hosamsam/hsa-travel","web":"https://hosamsam.github.io/hsa-travel/"}}],"skills":["web programming languages and tools like HTML5, CSS3, JAVSCRIPT","SCSS as css preprocessor language and Bootstrap as style framework","Javacsript OOP & FB","Angular (4) as MVC framework","Ionic (3) as a framework to build hybrid mobile apps","Typescript","NODEJS & ExpressJs as a server side frameworks","Linux Bash shell and windows command line","Good communication English skills in programming and real","GIT and GitHub as version control system managements"]}
+
+/***/ }),
+/* 3 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10599,7 +10628,7 @@ function getSvgIcon(name) {
         case 'secondary_email':
             return `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><path d="M32.3,10v980V10z"/><path d="M54.5,10v980V10z"/><path d="M76.8,10v980V10z"/><path d="M99.1,10v980V10z"/><path d="M121.4,10v980V10z"/><path d="M143.6,10v980V10z"/><path d="M165.9,10v980V10z"/><path d="M188.2,10v980V10z"/><path d="M210.5,10v980V10z"/><path d="M232.7,10v980V10z"/><path d="M255,10v980V10z"/><path d="M277.3,10v980V10z"/><path d="M299.5,10v980V10z"/><path d="M321.8,10v980V10z"/><path d="M344.1,10v980V10z"/><path d="M366.4,10v980V10z"/><path d="M388.6,10v980V10z"/><path d="M410.9,10v980V10z"/><path d="M433.2,10v980V10z"/><path d="M455.5,10v980V10z"/><path d="M477.7,10v980V10z"/><path d="M500,10v980V10z"/><path d="M522.3,10v980V10z"/><path d="M544.5,10v980V10z"/><path d="M566.8,10v980V10z"/><path d="M589.1,10v980V10z"/><path d="M611.4,10v980V10z"/><path d="M633.6,10v980V10z"/><path d="M655.9,10v980V10z"/><path d="M678.2,10v980V10z"/><path d="M700.5,10v980V10z"/><path d="M722.7,10v980V10z"/><path d="M745,10v980V10z"/><path d="M767.3,10v980V10z"/><path d="M789.5,10v980V10z"/><path d="M811.8,10v980V10z"/><path d="M834.1,10v980V10z"/><path d="M856.4,10v980V10z"/><path d="M878.6,10v980V10z"/><path d="M900.9,10v980V10z"/><path d="M923.2,10v980V10z"/><path d="M945.5,10v980V10z"/><path d="M967.7,10v980V10z"/><path d="M10,32.3h980H10z"/><path d="M10,54.5h980H10z"/><path d="M10,76.8h980H10z"/><path d="M10,99.1h980H10z"/><path d="M10,121.4h980H10z"/><path d="M10,143.6h980H10z"/><path d="M10,165.9h980H10z"/><path d="M10,188.2h980H10z"/><path d="M10,210.5h980H10z"/><path d="M10,232.7h980H10z"/><path d="M10,255h980H10z"/><path d="M10,277.3h980H10z"/><path d="M10,299.5h980H10z"/><path d="M10,321.8h980H10z"/><path d="M10,344.1h980H10z"/><path d="M10,366.4h980H10z"/><path d="M10,388.6h980H10z"/><path d="M10,410.9h980H10z"/><path d="M10,433.2h980H10z"/><path d="M10,455.5h980H10z"/><path d="M10,477.7h980H10z"/><path d="M10,500h980H10z"/><path d="M10,522.3h980H10z"/><path d="M10,544.5h980H10z"/><path d="M10,566.8h980H10z"/><path d="M10,589.1h980H10z"/><path d="M10,611.4h980H10z"/><path d="M10,633.6h980H10z"/><path d="M10,655.9h980H10z"/><path d="M10,678.2h980H10z"/><path d="M10,700.5h980H10z"/><path d="M10,722.7h980H10z"/><path d="M10,745h980H10z"/><path d="M10,767.3h980H10z"/><path d="M10,789.5h980H10z"/><path d="M10,811.8h980H10z"/><path d="M10,834.1h980H10z"/><path d="M10,856.4h980H10z"/><path d="M10,878.6h980H10z"/><path d="M10,900.9h980H10z"/><path d="M10,923.2h980H10z"/><path d="M10,945.5h980H10z"/><path d="M10,967.7h980H10z"/><path d="M900.9,856.4H99.1c-49.2,0-89.1-39.9-89.1-89.1V232.7c0-49.2,39.9-89.1,89.1-89.1h801.8c49.2,0,89.1,39.9,89.1,89.1v534.5C990,816.5,950.1,856.4,900.9,856.4L900.9,856.4z M856.4,767.3L601,543.8l-101,89.8l-101-89.8L143.6,767.3H856.4z M99.1,722.7L349.7,500L99.1,277.3V722.7z M143.6,232.7L500,544.5l356.4-311.8H143.6z M900.9,277.3L650.3,500l250.6,222.7V277.3z"/></g></svg>`;
         case 'linkedIn':
-            return `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000"enable-background="new 0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><g> <path fill="#ddd" d="M825.4,10H174.6C84.1,10,10,84.1,10,174.6v650.8C10,915.9,84.1,990,174.6,990h650.8c90.5,0,164.6-74.1,164.6-164.6V174.6C990,84.1,915.9,10,825.4,10z M377.5,806.3H255V377.5h122.5V806.3z M316.3,316.3c-33.8,0-61.3-27.4-61.3-61.3s27.4-61.3,61.3-61.3s61.3,27.4,61.3,61.3S350.1,316.3,316.3,316.3z M806.3,806.3H683.8v-245c0-33.8-27.4-61.3-61.3-61.3s-61.3,27.4-61.3,61.3v245H438.8V377.5h122.5v76.1c25.3-34.7,63.9-76.1,107.2-76.1c76.1,0,137.8,68.6,137.8,153.1V806.3z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></g></svg>`
+            return `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000"enable-background="new 0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><g> <path fill="#ddd" d="M825.4,10H174.6C84.1,10,10,84.1,10,174.6v650.8C10,915.9,84.1,990,174.6,990h650.8c90.5,0,164.6-74.1,164.6-164.6V174.6C990,84.1,915.9,10,825.4,10z M377.5,806.3H255V377.5h122.5V806.3z M316.3,316.3c-33.8,0-61.3-27.4-61.3-61.3s27.4-61.3,61.3-61.3s61.3,27.4,61.3,61.3S350.1,316.3,316.3,316.3z M806.3,806.3H683.8v-245c0-33.8-27.4-61.3-61.3-61.3s-61.3,27.4-61.3,61.3v245H438.8V377.5h122.5v76.1c25.3-34.7,63.9-76.1,107.2-76.1c76.1,0,137.8,68.6,137.8,153.1V806.3z"/></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></g></svg>`;
         case 'twitter':
             return `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><path d="M989.9,282c-0.2-15.6-0.3-22-0.4-29.4c-0.4-22-1.8-44.2-5.6-64.1c-4.1-21.6-9.6-41.3-19.6-61.1c-10.1-20-24-37.2-39-52.6c-15.4-15-32.7-28.9-52.6-39c-19.7-10-39.3-15.5-61.1-19.6c-19.9-3.7-42.1-5.2-64.1-5.6c-7.4-0.1-13.8-0.2-29.4-0.4C703.1,10.1,691,10,682,10c-45.6,0-318.3,0-364,0c-9,0-21.2,0.1-36,0.2c-15.6,0.2-22,0.3-29.4,0.4c-22,0.4-44.2,1.8-64.1,5.6c-21.6,4.1-41.3,9.6-61.1,19.6c-20,10.1-37.2,24-52.6,39c-15,15.4-28.9,32.7-39,52.6c-10,19.7-15.5,39.3-19.6,61.1c-3.7,19.9-5.2,42.1-5.6,64.1c-0.1,7.4-0.2,13.8-0.4,29.4c-0.1,14.9-0.2,27.1-0.2,36.1v364c0,9,0.1,21.2,0.2,36c0.2,15.6,0.3,22,0.4,29.4c0.4,22,1.8,44.2,5.6,64.1c4.1,21.6,9.6,41.3,19.6,61.1c10.1,20,24,37.2,39,52.6c15.4,15,32.7,28.9,52.6,39c19.7,10,39.3,15.5,61.1,19.6c19.9,3.7,42.1,5.2,64.1,5.6c7.4,0.1,13.8,0.2,29.4,0.4c14.8,0.1,27,0.2,36,0.2c45.6,0,318.3,0,364,0c9,0,21.2-0.1,36-0.2c15.6-0.2,22-0.3,29.4-0.4c22-0.4,44.2-1.8,64.1-5.6c21.6-4.1,41.3-9.6,61.1-19.6c20-10.1,37.2-24,52.6-39c15-15.4,28.9-32.7,39-52.6c10-19.7,15.5-39.3,19.6-61.1c3.7-19.9,5.2-42.1,5.6-64.1c0.1-7.4,0.2-13.8,0.4-29.4c0.1-14.8,0.2-27,0.2-36v-364C990.1,309.1,990,296.9,989.9,282z M782.4,357.7c-3.3,246.3-160.8,415-395.9,425.6c-97,4.4-167.2-26.9-228.4-65.8c71.7,11.5,160.5-17.2,208.1-57.9c-70.3-6.9-111.8-42.6-131.3-100.1c20.3,3.5,41.6,2.6,61-1.5c-63.4-21.2-108.6-60.4-111-142.5c17.8,8.1,36.4,15.7,61,17.2c-47.5-27-82.5-125.6-42.3-190.8c70.4,77.2,155.1,140.2,294.2,148.7c-34.9-149.2,162.9-230.2,245.6-129.9c35-6.8,63.5-20,90.8-34.5c-11.3,34.6-33,58.9-59.4,78.3c29.1-3.9,54.7-11,76.8-21.9C837.9,310.9,808,336.3,782.4,357.7z"/></g></svg>`;
         case 'codepen':
@@ -10612,7 +10641,7 @@ function getSvgIcon(name) {
 function getAllIcons(iconsObj) {
     return Object.keys(iconsObj)
         .map(key=>`\<a class="btn-anc" target="noopener" href="${iconsObj[key]}">${getSvgIcon(key)}</a>`)
-        .join('')
+        .join('');
 }
 
 function  markupBio(selector, data) {
@@ -10621,8 +10650,7 @@ function  markupBio(selector, data) {
             <h3 class="lead">${data.name}
             <br>
             <span>${data.role}</span>
-        </h3>
-        `)
+        </h3>`);
 }
 
 function statsHTML(data) {
@@ -10630,28 +10658,22 @@ function statsHTML(data) {
     function fill(num) {
         let rankHTML = '';
         for (let i= 1;i<=10;i++) {
-            rankHTML += num>=i?'<span class="filled"></span>':'<span></span>'
+            rankHTML += num>=i?'<span class="filled"></span>':'<span></span>';
         }
-        return rankHTML
+        return rankHTML;
     }
     return data.map(t=>`<div class="lang-stat">
                 <p>${t.name}</p>
                 ${fill(t.rank)}
-            </div>`).join('')
+            </div>`).join('');
 }
 
 function markupStatus (selector, data) {
 
-    selector.append(statsHTML(data))
+    selector.append(statsHTML(data));
 }
 
 
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-module.exports = {"bio":{"name":"Hosam Elnabawy Ahmed","role":"FULL STACK JAVACSRIPT Developer","imgPath":"./images/h-profile.png","mobile":"+201201914918","contacts":{"primary_email":"hossam216921@eng.zu.edu.eg","secondary_email":"hosamelnabawy@outlook.com","github":"https://github.com/hosamsam","codepen":"http://codepen.io/hosamsam/","twitter":"https://twitter.com/hosam1696","linkedIn":"https://www.linkedin.com/in/hosamsam/"},"technologies":[{"name":"Javascript","rank":9},{"name":"Ionic","rank":8},{"name":"Angular","rank":9},{"name":"Nodejs","rank":8}]},"education":{"schools":[{"name":"","location":"","degree":"","major":"","date":""}],"onlineCourses":[{"title":"","school":"","dates":"","url":""}],"display":""},"work":{"jobs":[{"employer":"","title":"","dates":"","dexcription":""}],"display":""},"projects":[{"title":"Matager App","dates":"2017","description":"Mobile App to facilate dealing with stores and exporters","images":"proj-img.jpg","links":{"github":"https://github.com/hosamsam/matagerApp"}},{"title":"Bawaba App","dates":"2017","description":"Mobile App let students book travel tickets","images":"proj-img.jpg","links":{"github":"https://github.com/hosamsam/bawabaApp","web":"https://itunes.apple.com/us/app/%D8%A8%D9%88%D8%A7%D8%A8%D8%A9-%D8%A7%D9%84%D9%86%D9%82%D9%84/id1110646052?ls=1&mt=8"}},{"title":"Ubzil App","dates":"2017","description":"Mobile App to connect services providers to who need it","images":"proj-img.jpg","links":{"github":"https://github.com/hosamsam/UbzilApp"}},{"title":"Roax Academy Website","dates":"2017","description":"website to let people chat and learn together","images":"proj-img.jpg","links":{"github":"https://github.com/hosamsam/RoaxAcademy-express","web":"https://pure-ravine-76563.herokuapp.com/"}},{"title":"Ecoomerce Angular2","dates":"2017","description":"website built by Angular ang hosted on github","images":"proj-img.jpg","links":{"github":"https://github.com/hosamsam/e-commerce-angular","web":"https://hosamsam.github.io/e-commerce-angular"}},{"title":"Landing Page","dates":"2017","description":"responsive one page HTML and CSS for resturants","images":"proj-img.jpg","links":{"github":"https://github.com/hosamsam/omnifood","web":"https://hosamsam.github.io/omnifood/resources/"}},{"title":"Travel Template","dates":"2017","description":"Responsive website ","images":"proj-img.jpg","links":{"github":"https://github.com/hosamsam/hsa-travel","web":"https://hosamsam.github.io/hsa-travel/"}}],"skills":["web programming languages and tools like HTML5, CSS3, JAVSCRIPT","SCSS as css preprocessor language and Bootstrap as style framework","Javacsript OOP & FB","Angular (4) as MVC framework","Ionic (3) as a framework to build hybrid mobile apps","Typescript","NODEJS & ExpressJs as a server side frameworks","Linux Bash shell and windows command line","Good communication English skills in programming and real","GIT and GitHub as version control system managements"]}
 
 /***/ })
 /******/ ]);

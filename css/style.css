@@ -35,7 +35,10 @@ ul {
 ul li {
     list-style: none;
 }
-
+#mapDiv {
+    width: 100%;
+    height: 400px;
+}
 #side-info,
 #side-info .info,
 #work .project-col .project {
@@ -263,19 +266,20 @@ body h1.lead:before {
 }
 
 .right-col section#hero-section .hero-content h1:before {
-    content: "Portfolio ";
-    color: #333;
-    background: linear-gradient(to right, #1b7bce, #26b5f5 45%, #26b5f5 55%, #1b7bce);
-    position: absolute;
-    top: 0;
-    font-size: 6rem;
-    padding-top: 0;
-    left: 0;
-    width: 100%;
-    height: 52%;
-    z-index: 4;
-    overflow: hidden;
-    border-radius: 4px 30px 0 0;
+       content: "resume ";
+       color: #333;
+       background: linear-gradient(to right, #1b7bce, #26b5f5 45%, #26b5f5 55%, #1b7bce);
+       position: absolute;
+       top: 10px;
+       font-size: 6rem;
+       padding-top: 0;
+       left: 0;
+       width: 102%;
+       height: 48%;
+       z-index: 4;
+       overflow: hidden;
+       border-radius: 4px 30px 0 0;
+       line-height: 1.3;
 }
 
 .right-col #portfolio .container {
