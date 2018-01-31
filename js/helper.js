@@ -1,4 +1,7 @@
-export function getSvgIcon(name) {
+import * as $ from 'jquery';
+
+
+function getSvgIcon(name) {
     switch (name) {
         case 'github':
             return `<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000"enable-background="new 0 0 1000 1000" xml:space="preserve"><metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata><g><path d="M990,512c0,106.8-31.2,202.8-93.5,288.1C834.2,885.4,753.7,944.4,655,977.2c-11.5,2.1-19.9,0.6-25.2-4.5c-5.3-5.1-8-11.5-8-19.2V818.9c0-41.3-11.1-71.5-33.2-90.6c24.3-2.6,46.1-6.4,65.4-11.5c19.4-5.1,39.4-13.4,60-24.9c20.6-11.5,37.9-25.6,51.7-42.4c13.8-16.8,25.1-39.1,33.8-67c8.7-27.9,13.1-59.9,13.1-96c0-51.5-16.8-95.3-50.4-131.5c15.7-38.7,14-82.1-5.1-130.1c-11.9-3.8-29.2-1.5-51.7,7s-42.1,17.9-58.7,28.1l-24.3,15.3c-39.6-11.1-80.4-16.6-122.5-16.6s-83,5.5-122.5,16.6c-6.8-4.7-15.8-10.4-27.1-17.2c-11.3-6.8-29-15-53.3-24.6c-24.3-9.6-42.6-12.5-54.9-8.6c-18.7,48.1-20.2,91.5-4.5,130.1c-33.6,36.2-50.4,80-50.4,131.5c0,36.2,4.4,68.1,13.1,95.7c8.7,27.7,19.9,50,33.5,67c13.6,17,30.7,31.3,51.4,42.8c20.6,11.5,40.6,19.8,60,24.9c19.4,5.1,41.2,8.9,65.4,11.5c-17,15.3-27.4,37.2-31.3,65.7c-8.9,4.2-18.5,7.4-28.7,9.6c-10.2,2.1-22.3,3.2-36.4,3.2s-28-4.6-41.8-13.7c-13.8-9.1-25.6-22.4-35.4-39.9c-8.1-13.6-18.4-24.7-31-33.2c-12.6-8.5-23.1-13.6-31.6-15.3l-12.8-1.9c-8.9,0-15.1,1-18.5,2.9c-3.4,1.9-4.5,4.4-3.2,7.3c1.3,3,3.2,6,5.8,8.9c2.6,3,5.3,5.5,8.3,7.6l4.5,3.2c9.4,4.2,18.6,12.3,27.8,24.3c9.1,11.9,15.8,22.8,20.1,32.5l6.4,14.7c5.5,16.2,14.9,29.3,28.1,39.2c13.2,10,27.5,16.4,42.8,19.2s30.1,4.3,44.3,4.5c14.3,0.2,26.1-0.6,35.4-2.2l14.7-2.6c0,16.2,0.1,35.1,0.3,56.8c0.2,21.7,0.3,33.2,0.3,34.5c0,7.7-2.8,14-8.3,19.2c-5.5,5.1-14,6.6-25.5,4.4c-98.7-32.8-179.2-91.8-241.5-177.1C41.2,714.7,10,618.7,10,511.9c0-88.9,21.9-170.9,65.7-246C119.5,190.9,179,131.4,254,87.6c75.1-43.8,157.1-65.7,246-65.7c88.9,0,170.9,21.9,246,65.7c75.1,43.8,134.5,103.2,178.3,178.3C968.1,341.1,990,423,990,512L990,512z"/></g></svg>`;
@@ -19,15 +22,18 @@ export function getSvgIcon(name) {
     }
 }
 
-export function getAllIcons(iconsObj) {
+function getAllIcons(iconsObj) {
     return Object.keys(iconsObj)
         .map(key=>`\<a class="btn-anc" target="noopener" href="${iconsObj[key]}">${getSvgIcon(key)}</a>`)
         .join('');
 }
 
-export function  markupBio(selector, data) {
+function  markupBio(selector, data) {
     selector.html(`\
-        <img src="${data.imgPath}" alt="avatar" width="80" height="80">
+        <img src = "./images/${data.biopic}"
+        alt = "avatar"
+        width = "80"
+        height = "80" >
             <h3 class="lead">${data.name}
             <br>
             <span>${data.role}</span>
@@ -49,8 +55,269 @@ function statsHTML(data) {
             </div>`).join('');
 }
 
-export function markupStatus (selector, data) {
+function markupStatus (selector, data) {
 
     selector.append(statsHTML(data));
 }
+
+
+export const APP_DATA = {
+    "bio": {
+        "name": "Hosam Elnabawy Ahmed",
+        "role": "FULL STACK JAVACSRIPT Developer",
+        "biopic": "h-profile.png",
+        "contacts": {
+            "primary_email": "hossam216921@eng.zu.edu.eg",
+            "secondary_email": "hosamelnabawy@outlook.com",
+            "github": "https://github.com/hosamsam",
+            "codepen": "http://codepen.io/hosamsam/",
+            "twitter": "https://twitter.com/hosam1696",
+            "linkedIn": "https://www.linkedin.com/in/hosamsam/",
+            "mobile": "+201201914918",
+            "location": "Cairo, Egypt"
+        },
+        "welcomeMessage": "Welcome to my resume",
+
+        "technologies": [
+            {
+                "name": "Javascript",
+                "rank": 9
+            },
+            {
+                "name": "Ionic",
+                "rank": 8
+            },
+            {
+                "name": "Angular",
+                "rank": 9
+            },
+            {
+                "name": "Nodejs",
+                "rank": 8
+            }
+        ],
+        "skills": [
+            "web programming languages and tools like HTML5, CSS3, JAVSCRIPT",
+            "SCSS as css preprocessor language and Bootstrap as style framework",
+            "Javacsript OOP & FB",
+            "Angular (4) as MVC framework",
+            "Ionic (3) as a framework to build hybrid mobile apps",
+            "Typescript",
+            "NODEJS & ExpressJs as a server side frameworks",
+            "Linux Bash shell and windows command line",
+            "Good communication English skills in programming and real",
+            "GIT and GitHub as version control system managements"
+        ], display: function (section) {
+            
+            const skillSection = $('#skills');
+            const avatarSection = $('.avatar');
+            const statsSection = $('.statics');
+            const contactsSection = $('.contact');
+            let skillsHTML = this.skills.map(skill => `<li>${skill}</li>`).join('');
+            let inlineList = $('<ul class="navbar-nav-line"></ul>');
+            let blockList = $('<ul class="navbar-nav"></ul>');
+            
+
+            skillSection.append(skillsHTML); // display skills
+    
+            markupBio(avatarSection, this); // display avatar section
+                
+            markupStatus(statsSection, this.technologies); // display statistics
+        
+            for (let [key, url] of Object.entries(this.contacts)) {
+                if (key === 'primary_email' || key === 'secondary_email') {
+                    blockList.append(`<li>${getSvgIcon(key)}<span class="vertical-sep"></span><a href="mailto:${url}">${url}</a></li>`);
+                } else if (key === 'mobile' || key === 'location') {
+                    continue;
+                } else {
+                    inlineList.append(`<li class="line"><a href="${url}" target="noopener">${getSvgIcon(key)}</a></li>`);
+                }
+            }
+            contactsSection.append(blockList, inlineList);
+        }
+        
+
+    },
+    "education": {
+        "schools": [
+            {
+                "name": "zagazig university",
+                "location": "zagazig, Egypt",
+                "degree": "Electronics Engineering",
+                "major": "Engineering",
+                "date": "2017"
+            }
+        ],
+        "onlineCourses": [
+            {
+                "title": "Front End NanoDegree",
+                "school": "Udacity",
+                "dates": "2018",
+                "url": "https://classroom.udacity.com/nanodegrees/nd001"
+            }
+        ],
+        "display": function () {
+            const coursesDiv = $('#courses-div');
+
+            coursesDiv.append(
+                this.onlineCourses
+                    .map(course => course.title + '<br>' + course.school)
+            );
+        }
+    },
+    "work": {
+        "jobs": [
+            {
+                "employer": "hemed",
+                "title": "Front End Developer",
+                "dates": "2016",
+                "dexcription": "build static and responsivee HTML"
+            }
+        ],
+        "display": function () {
+
+            const objectsDiv = $('.objects');
+            const [objDivHeight, objDivWidth] = [objectsDiv.width(), objectsDiv.height()];
+            // global functions
+            const range = (start, end) => Array.from({ length: end - start + 1 }, (t, i) => i + start);
+            const random = (start, end) => Math.floor(Math.random() * end) + start;
+            const getRandomColor = () => "#" + ((1 << 24) * Math.random() | 0).toString(16);
+
+            range(1, 20).forEach(div => {
+                div = document.createElement('div');
+                let randWidth = random(0, objDivWidth) + 'px';
+                Object.assign(div.style, {
+                    width: randWidth,
+                    height: randWidth,
+                    borderRadius: random(0, 2) * 50 + '%',
+                    backgroundColor: getRandomColor(),
+                    opacity: Math.random() - 0.2,
+                    transform: `rotate(${random(0, 360)}deg) translate(${random(0, objDivWidth * 2)}px, ${random(0, objDivHeight / 2)}px)`
+                });
+                objectsDiv.append(div);
+            });
+        }
+    },
+    "projects": {
+        "projects": [
+            {
+                "title": "Matager App",
+                "dates": "2017",
+                "description": "Mobile App to facilate dealing with stores and exporters",
+                "images": "proj-img.jpg",
+                "links": {
+                    "github": "https://github.com/hosamsam/matagerApp"
+                }
+            },
+            {
+                "title": "Bawaba App",
+                "dates": "2017",
+                "description": "Mobile App let students book travel tickets",
+                "images": "proj-img.jpg",
+                "links": {
+                    "github": "https://github.com/hosamsam/bawabaApp",
+                    "web": "https://itunes.apple.com/us/app/%D8%A8%D9%88%D8%A7%D8%A8%D8%A9-%D8%A7%D9%84%D9%86%D9%82%D9%84/id1110646052?ls=1&mt=8"
+                }
+            },
+            {
+                "title": "Ubzil App",
+                "dates": "2017",
+                "description": "Mobile App to connect services providers to who need it",
+                "images": "proj-img.jpg",
+                "links": {
+                    "github": "https://github.com/hosamsam/UbzilApp"
+                }
+            },
+            {
+                "title": "Roax Academy Website",
+                "dates": "2017",
+                "description": "website to let people chat and learn together",
+                "images": "proj-img.jpg",
+                "links": {
+                    "github": "https://github.com/hosamsam/RoaxAcademy-express",
+                    "web": "https://pure-ravine-76563.herokuapp.com/"
+                }
+            },
+            {
+                "title": "Ecoomerce Angular2",
+                "dates": "2017",
+                "description": "website built by Angular ang hosted on github",
+                "images": "proj-img.jpg",
+                "links": {
+                    "github": "https://github.com/hosamsam/e-commerce-angular",
+                    "web": "https://hosamsam.github.io/e-commerce-angular"
+                }
+            },
+            {
+                "title": "Landing Page",
+                "dates": "2017",
+                "description": "responsive one page HTML and CSS for resturants",
+                "images": "proj-img.jpg",
+                "links": {
+                    "github": "https://github.com/hosamsam/omnifood",
+                    "web": "https://hosamsam.github.io/omnifood/resources/"
+                }
+            },
+            {
+                "title": "Travel Template",
+                "dates": "2017",
+                "description": "Responsive website ",
+                "images": "proj-img.jpg",
+                "links": {
+                    "github": "https://github.com/hosamsam/hsa-travel",
+                    "web": "https://hosamsam.github.io/hsa-travel/"
+                }
+            }
+        ],
+        "display": function () {
+
+            const projectHolder = $('.projects-holder');
+            projectHolder.append(() => {
+                let projectData = this.projects;
+                return projectData.map(project => {
+                    return `
+            <div class="col project-col">
+                <div class="project">
+                    <div class="project-img">
+                        <h4>${project.title}</h4>
+                    </div>
+                    <div class="project-btns">
+                        ${getAllIcons(project.links)}
+                    </div>
+                </div>
+            </div>`;
+                }).join('');
+            });
+        }
+    }, locationFinder: function () {
+
+        google.maps.event.addDomListener(window, 'load', init);
+
+        function init() {
+            let myLat = new google.maps.LatLng(30.026510, 31.211858); // Cairo;
+            let mapOptions = {
+                zoom: 11,
+
+                center: myLat,
+
+                styles: [{ "featureType": "all", "elementType": "all", "stylers": [{ "visibility": "on" }] }, { "featureType": "all", "elementType": "labels", "stylers": [{ "visibility": "off" }, { "saturation": "-100" }] }, { "featureType": "all", "elementType": "labels.text.fill", "stylers": [{ "saturation": 36 }, { "color": "#000000" }, { "lightness": 40 }, { "visibility": "off" }] }, { "featureType": "all", "elementType": "labels.text.stroke", "stylers": [{ "visibility": "off" }, { "color": "#000000" }, { "lightness": 16 }] }, { "featureType": "all", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "administrative", "elementType": "geometry.fill", "stylers": [{ "color": "#000000" }, { "lightness": 20 }] }, { "featureType": "administrative", "elementType": "geometry.stroke", "stylers": [{ "color": "#000000" }, { "lightness": 17 }, { "weight": 1.2 }] }, { "featureType": "landscape", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 20 }] }, { "featureType": "landscape", "elementType": "geometry.fill", "stylers": [{ "color": "#4d6059" }] }, { "featureType": "landscape", "elementType": "geometry.stroke", "stylers": [{ "color": "#4d6059" }] }, { "featureType": "landscape.natural", "elementType": "geometry.fill", "stylers": [{ "color": "#4d6059" }] }, { "featureType": "poi", "elementType": "geometry", "stylers": [{ "lightness": 21 }] }, { "featureType": "poi", "elementType": "geometry.fill", "stylers": [{ "color": "#4d6059" }] }, { "featureType": "poi", "elementType": "geometry.stroke", "stylers": [{ "color": "#4d6059" }] }, { "featureType": "road", "elementType": "geometry", "stylers": [{ "visibility": "on" }, { "color": "#7f8d89" }] }, { "featureType": "road", "elementType": "geometry.fill", "stylers": [{ "color": "#7f8d89" }] }, { "featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{ "color": "#7f8d89" }, { "lightness": 17 }] }, { "featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [{ "color": "#7f8d89" }, { "lightness": 29 }, { "weight": 0.2 }] }, { "featureType": "road.arterial", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 18 }] }, { "featureType": "road.arterial", "elementType": "geometry.fill", "stylers": [{ "color": "#7f8d89" }] }, { "featureType": "road.arterial", "elementType": "geometry.stroke", "stylers": [{ "color": "#7f8d89" }] }, { "featureType": "road.local", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 16 }] }, { "featureType": "road.local", "elementType": "geometry.fill", "stylers": [{ "color": "#7f8d89" }] }, { "featureType": "road.local", "elementType": "geometry.stroke", "stylers": [{ "color": "#7f8d89" }] }, { "featureType": "transit", "elementType": "geometry", "stylers": [{ "color": "#000000" }, { "lightness": 19 }] }, { "featureType": "water", "elementType": "all", "stylers": [{ "color": "#2b3638" }, { "visibility": "on" }] }, { "featureType": "water", "elementType": "geometry", "stylers": [{ "color": "#2b3638" }, { "lightness": 17 }] }, { "featureType": "water", "elementType": "geometry.fill", "stylers": [{ "color": "#24282b" }] }, { "featureType": "water", "elementType": "geometry.stroke", "stylers": [{ "color": "#24282b" }] }, { "featureType": "water", "elementType": "labels", "stylers": [{ "visibility": "off" }] }, { "featureType": "water", "elementType": "labels.text", "stylers": [{ "visibility": "off" }] }, { "featureType": "water", "elementType": "labels.text.fill", "stylers": [{ "visibility": "off" }] }, { "featureType": "water", "elementType": "labels.text.stroke", "stylers": [{ "visibility": "off" }] }, { "featureType": "water", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }]
+            };
+
+            let mapElement = document.getElementById('mapDiv');
+
+            let map = new google.maps.Map(mapElement, mapOptions);
+
+            let marker = new google.maps.Marker({
+                position: myLat,
+                map: map,
+                draggable: true,
+                animation: google.maps.Animation.DROP,
+                title: 'Home!'
+            });
+
+            marker.setMap(map);
+        }
+
+    }
+};
 

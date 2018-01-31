@@ -12,6 +12,8 @@
             "twitter": "https://twitter.com/hosam1696",
             "linkedIn": "https://www.linkedin.com/in/hosamsam/"
         },
+        "welcomeMessage": "Welcome to my resume",
+
         "technologies": [
             {
                 "name": "Javascript",
@@ -29,7 +31,20 @@
                 "name": "Nodejs",
                 "rank": 8
             }
+        ],
+        "skills": [
+            "web programming languages and tools like HTML5, CSS3, JAVSCRIPT",
+            "SCSS as css preprocessor language and Bootstrap as style framework",
+            "Javacsript OOP & FB",
+            "Angular (4) as MVC framework",
+            "Ionic (3) as a framework to build hybrid mobile apps",
+            "Typescript",
+            "NODEJS & ExpressJs as a server side frameworks",
+            "Linux Bash shell and windows command line",
+            "Good communication English skills in programming and real",
+            "GIT and GitHub as version control system managements"
         ]
+
     },
     "education": {
         "schools": [
