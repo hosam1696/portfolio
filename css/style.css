@@ -64,7 +64,7 @@ body h1.lead {
 }
 
 .lead {
-    color: #eee
+    color: #4f6c79
 }
 
 .lead span {
@@ -401,7 +401,7 @@ body h1.lead:before {
     bottom: -10px;
     margin-top: 10px;
     background: #111;
-    box-shadow: 1px 1px #333;
+    box-shadow: 1px 1px #314148;
 }
 
 #side-info .avatar h3:before {
@@ -414,7 +414,7 @@ body h1.lead:before {
     bottom: -11px;
     left: 43%;
     background: #111111;
-    box-shadow: 0 1px #444;
+    box-shadow: 0 1px #314148;
 }
 
 #side-info .info {
@@ -427,8 +427,11 @@ body h1.lead:before {
     margin-bottom: 5px;
     font-weight: bold;
     letter-spacing: 1px;
-    color: #ddd;
-    text-align: center
+    color: #7b9eaf;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 3px;
+    font-size: 14px;
 }
 
 #side-info .info .statics {
@@ -436,9 +439,11 @@ body h1.lead:before {
 }
 
 #side-info .info .statics .lang-stat p {
-    font-weight: normal;
+    font-weight: bold;
+    letter-spacing: 1px;
     padding-left: 10px;
     margin-bottom: 0.3rem;
+    color: #4f6c79
 }
 
 #side-info .info .statics .lang-stat:hover>span.filled {
@@ -504,7 +509,7 @@ body h1.lead:before {
 }
 
 #side-info .info .contact li a {
-    color: #ccc;
+    color: #4f6c79;
     text-decoration: none;
     position: relative;
     z-index: 8;
