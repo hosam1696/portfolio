@@ -455,7 +455,7 @@ body h1.lead:before {
     display: inline-flex;
     width: 12px;
     height: 24px;
-    background: #333;
+    background: #4b6874;
     transform: skew(-25deg);
     margin: 5px 4px;
     border-radius: 2px;
@@ -463,7 +463,7 @@ body h1.lead:before {
 }
 
 #side-info .info .statics .lang-stat span.filled {
-    background: #8d8d8d;
+    background: #03a9f4;
     transition: background 0.2s ease;
 }
 
