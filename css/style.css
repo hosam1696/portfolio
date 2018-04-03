@@ -246,12 +246,18 @@ body h1.lead:before {
 
 .right-col section#hero-section .hero-content a {
     margin-top: -5px;
-    color: #555;
+    color: #888;
     text-decoration: none;
     z-index: 6;
-    display: flex;
+    display: inline-flex;
+    flex-direction: flex-end;
+    padding: 0 5px;
     text-transform: capitalize;
     flex-direction: row-reverse;
+}
+
+.right-col section#hero-section .hero-content a:hover {
+    color: #ccc;
 }
 
 .right-col section#hero-section .hero-content h1 {
