@@ -32,8 +32,8 @@ function  markupBio(selector, data) {
     selector.html(`\
         <img src = "./images/${data.biopic}"
         alt = "avatar"
-        width = "80"
-        height = "80" >
+        width = "110"
+        height = "110" >
             <h3 class="lead">${data.name}
             <br>
             <span>${data.role}</span>

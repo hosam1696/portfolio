@@ -22,7 +22,7 @@
 
 body {
     overflow: hidden;
-    background: #101f25;
+    background: #f6f6f6;
     margin: 0;
     font-family: sans-serif;
 }
@@ -35,10 +35,12 @@ ul {
 ul li {
     list-style: none;
 }
+
 #mapDiv {
     width: 100%;
     height: 400px;
 }
+
 #side-info,
 #side-info .info,
 #work .project-col .project {
@@ -50,7 +52,7 @@ article {
     font-family: sans-serif;
     margin-bottom: 10px;
     word-spacing: 1px;
-    color: #ccc;
+    color: #333;
     line-height: 1.6
 }
 
@@ -69,7 +71,7 @@ body h1.lead {
 
 .lead span {
     font-size: 12px;
-    color: #aaa;
+    color: #333;
 }
 
 body h1.lead:after {
@@ -116,20 +118,20 @@ body h1.lead:before {
 .right-col section#hero-section {
     background: #222;
     position: relative;
-    height: 400px;
+    height: 100vh;
     overflow: hidden;
 }
 
 .right-col section#hero-section #canvas {
     position: absolute;
-    background: #101f25;
+    background: #f6f6f6;
     overflow: hidden;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     z-index: 2;
-    box-shadow: 0 110px #101f25;
+    box-shadow: 0 110px #f6f6f6;
 }
 
 .right-col section#hero-section #canvas .objects {
@@ -172,7 +174,8 @@ body h1.lead:before {
 }
 
 #hero-section #cv-btn a svg {
-    padding-left: 5px
+    padding-left: 5px;
+    fill: #fff
 }
 
 #hero-section #cv-btn button a {
@@ -232,60 +235,89 @@ body h1.lead:before {
     height: 100%;
     z-index: 3;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /*align-items: center; */
     flex-direction: column;
+    padding: 3rem;
     text-align: left;
-    box-shadow: inset 0 -25px 25px #101f25;
+    box-shadow: inset 0 -25px 25px #f6f6f6;
+}
+
+#hero-section .hero-content .hero-title {
+    margin: 3rem auto;
+    min-width: 30%;
+}
+
+.right-col section#hero-section .hero-content #about {
+    padding: 6rem 4rem 1rem;
+    background: linear-gradient(#ffffffcf, #ffffffcf);
+    border-radius: 10px;
+    border: 1px solid #fff;
+    height: fit-content;
+    width: 45vw;
+    margin: 1rem auto;
+}
+
+.right-col section#hero-section .hero-content #about h2 {
+    width: 15rem;
+    color: #fff;
+    position: absolute;
+    top: -2px;
+    left: calc(50% - 7rem);
+    margin: 0;
+    border-radius: 0 0 8px 8px;
 }
 
 #hero-section .hero-content .hero-title p {
     font-weight: normal;
-    color: #ccc;
+    color: #333;
 }
 
 .right-col section#hero-section .hero-content a {
-    margin-top: -5px;
-    color: #888;
+    color: #333;
     text-decoration: none;
     z-index: 6;
-    display: inline-flex;
+    display: inline-block;
     flex-direction: flex-end;
-    padding: 0 5px;
+    padding: 5px;
     text-transform: capitalize;
     flex-direction: row-reverse;
 }
 
 .right-col section#hero-section .hero-content a:hover {
-    color: #ccc;
+    color: #111;
 }
 
 .right-col section#hero-section .hero-content h1 {
     font-family: "Eagle Lake", cursive;
     font-size: 6rem;
-    color: #fff;
+    color: #333;
     position: relative;
     z-index: 5;
     margin-bottom: -10px;
     margin-top: 0;
-    font-weight: normal
+    font-weight: normal;
+    width: fit-content
 }
 
 .right-col section#hero-section .hero-content h1:before {
-       content: "resume ";
-       color: #333;
-       background: linear-gradient(to right, #1b7bce, #26b5f5 45%, #26b5f5 55%, #1b7bce);
-       position: absolute;
-       top: 10px;
-       font-size: 6rem;
-       padding-top: 0;
-       left: 0;
-       width: 102%;
-       height: 48%;
-       z-index: 4;
-       overflow: hidden;
-       border-radius: 4px 30px 0 0;
-       line-height: 1.3;
+    content: "resume ";
+    color: #fff;
+    background: linear-gradient(to right, #1b7bce, #26b5f5 45%, #26b5f5 55%, #1b7bce);
+    position: absolute;
+    top: 10px;
+    font-size: 6rem;
+    padding-top: 0;
+    left: 0;
+    width: 102%;
+    height: 48%;
+    z-index: 4;
+    overflow: hidden;
+    border-radius: 4px 30px 0 0;
+    line-height: 1.3;
+}
+
+.right-col #portfolio {
+    background-color: #f6f6f6;
 }
 
 .right-col #portfolio .container {
@@ -310,11 +342,12 @@ body h1.lead:before {
 
 .right-col #portfolio .container #skills ul {
     list-style: none;
-    color: #ccc;
+    color: #333;
 }
 
 .right-col #portfolio .container #skills li {
     padding: 6px;
+    color: #333;
 }
 
 .right-col #portfolio .container #skills li i {
@@ -322,14 +355,16 @@ body h1.lead:before {
 }
 
 #side-info {
-    background: #101f25;
-    color: #aaa;
+    background: linear-gradient(45deg, #007ef9, #00BCD4);
+    color: #666;
     box-shadow: inset -4px 0 #03a9f4, 5px 5px 26px #111;
-    padding: 0;
+    padding: 10px 0 0 0;
     height: 800px;
     z-index: 5;
     min-width: 250px;
+    max-width: 250px;
     position: relative;
+    height: 100vh;
 }
 
 .for-l-side {
@@ -433,7 +468,7 @@ body h1.lead:before {
     margin-bottom: 5px;
     font-weight: bold;
     letter-spacing: 1px;
-    color: #7b9eaf;
+    color: #333;
     text-align: center;
     font-weight: 300;
     letter-spacing: 3px;
@@ -449,7 +484,7 @@ body h1.lead:before {
     letter-spacing: 1px;
     padding-left: 10px;
     margin-bottom: 0.3rem;
-    color: #aaa
+    color: #333
 }
 
 #side-info .info .statics .lang-stat:hover>span.filled {
@@ -469,7 +504,7 @@ body h1.lead:before {
 }
 
 #side-info .info .statics .lang-stat span.filled {
-    background: #03a9f4;
+    background: #eee;
     transition: background 0.2s ease;
 }
 
@@ -502,8 +537,12 @@ body h1.lead:before {
 #side-info .info .contact ul li.line a svg,
 #side-info .info .contact ul li svg {
     width: 22px;
-    fill: #ccc;
+    fill: #fff;
     transition: fill 0.2s ease;
+}
+
+#side-info .info .contact ul li.line a svg * {
+    fill: #fff
 }
 
 #side-info .info .contact li i {
@@ -515,7 +554,7 @@ body h1.lead:before {
 }
 
 #side-info .info .contact li a {
-    color: #aaa;
+    color: #333;
     text-decoration: none;
     position: relative;
     z-index: 8;
@@ -560,13 +599,18 @@ body h1.lead:before {
 }
 
 #work .project-col .project {
-    box-shadow: 10px 10px 20px #111;
+    box-shadow: 10px 10px 20px #d6d6d6;
     height: 225px;
     overflow: hidden;
     margin-bottom: 10px;
-    border: 1px solid #101f24;
-    transition: border-color 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
-    background: #333;
+    border: 1px solid #eee;
+    transition: all 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    background: #fff;
+    border-radius: 8px;
+}
+
+#work .project-col .project:hover {
+    box-shadow: 0 0 0 #d6d6d6;
 }
 
 #work .project-col .project:hover .project-btns {
@@ -579,7 +623,7 @@ body h1.lead:before {
     flex-direction: column;
     padding: 0;
     background-size: cover;
-    background-image: linear-gradient(transparent, #000), url("../images/proj-img.jpg");
+    /* background-image: linear-gradient(transparent, #000), url("../images/proj-img.jpg"); */
 }
 
 #work .project-col .project .project-img h4 {
@@ -593,12 +637,14 @@ body h1.lead:before {
 }
 
 #work .project-col .project:hover {
-    border-color: #066074;
+    /* border-color: #066074; */
+    border-color: #ddd;
+    transform: scale(0.96);
     cursor: pointer;
 }
 
 #work .project-col .project:hover .project-img h4 {
-    color: #f4f4f4;
+    color: #555;
 }
 
 #work .project-col .project .project-btns {
@@ -618,7 +664,7 @@ body h1.lead:before {
 }
 
 #work .project-col .project .project-btns a.btn-anc:hover {
-    color: #f4f4f4
+    color: #555
 }
 
 #work .project-col .project .project-btns a svg {
@@ -628,7 +674,7 @@ body h1.lead:before {
 }
 
 #work .project-col .project .project-btns a svg:hover {
-    fill: #f4f4f4
+    fill: #555
 }
 
 #work .project-col .project .project-btns .btn {
@@ -649,6 +695,9 @@ body h1.lead:before {
         position: absolute;
         left: -100%;
         transition: left 0.25s linear;
+    }
+    .right-col section#hero-section .hero-content #about {
+        width: 80vw
     }
     .show-side {
         display: flex;
@@ -689,7 +738,7 @@ body h1.lead:before {
         width: 50%;
     }
     #skills li {
-        color: #ccc;
+        color: #333;
     }
     #skills ul li i {
         font-size: 10px;
@@ -718,7 +767,7 @@ body h1.lead:before {
         height: 100vh
     }
     .right-col {
-        width: 80%;
+        width: calc(100% - 250px);
     }
 }
 
@@ -731,17 +780,26 @@ body h1.lead:before {
 
 .background {
     font-family: "Eagle Lake", cursive;
-    height: 30px;
     position: relative;
     overflow: hidden;
-    width: 80%;
+    width: 60%;
     margin: 10px auto 25px;
+    padding: 1rem;
     border-radius: 5px;
     line-height: 28px;
     text-align: center;
     font-weight: normal;
     letter-spacing: 1px;
-    background: linear-gradient(to right, #101f25 5%, #101f25 20%, #1b7bce, #26b5f5 45%, #26b5f5 55%, #1b7bce, #101f25 80%, #101f25 95%);
+    /* background: linear-gradient(to right, #f6f6f6 5%, #f6f6f6 20%, #1b7bce, #26b5f5 45%, #26b5f5 55%, #1b7bce, #f6f6f6 80%, #f6f6f6 95%); */
+    background: linear-gradient(45deg, #673AB7, #cd46e4);
+}
+
+.bg-two {
+    background: linear-gradient(45deg, #FF5722, #FFC107)
+}
+
+.bg-three {
+    background: linear-gradient(45deg, #4CAF50, #abea61)
 }
 
 .background .content {
@@ -789,5 +847,41 @@ body h1.lead:before {
         width: auto;
         height: auto;
         opacity: 1;
+    }
+}
+
+.to-left {
+    transform: translateX(80px);
+    animation: leftpos 0.3s linear 0.1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes leftpos {
+    to {
+        transform: translateX(0);
+    }
+}
+
+.to-top {
+    transform: translateY(80px);
+    animation: toppos 0.3s linear 0.1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes toppos {
+    to {
+        transform: translateY(0);
+    }
+}
+
+.to-bottom {
+    transform: translateY(-80px);
+    animation: bottompos 0.3s linear 0.1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes bottompos {
+    to {
+        transform: translateY(0);
     }
 }
