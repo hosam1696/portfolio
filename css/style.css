@@ -248,7 +248,7 @@ body h1.lead:before {
 }
 
 .right-col section#hero-section .hero-content #about {
-    padding: 6rem 4rem 1rem;
+    padding: 6rem 3rem 1rem;
     background: linear-gradient(#ffffffcf, #ffffffcf);
     border-radius: 10px;
     border: 1px solid #fff;
@@ -720,7 +720,9 @@ body h1.lead:before {
         transition: left 0.25s linear;
     }
     .right-col section#hero-section .hero-content #about {
-        width: 80vw
+        width: 80vw;
+        height: 300px;
+        overflow-y: scroll;
     }
     .show-side {
         display: flex;
