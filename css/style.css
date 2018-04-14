@@ -244,7 +244,6 @@ body h1.lead:before {
 
 #hero-section .hero-content .hero-title {
     margin: 3rem auto;
-    min-width: 30%;
 }
 
 .right-col section#hero-section .hero-content #about {
@@ -255,6 +254,8 @@ body h1.lead:before {
     height: fit-content;
     width: 45vw;
     margin: 1rem auto;
+    height: 300px;
+    overflow-y: scroll;
 }
 
 .right-col section#hero-section .hero-content #about h2 {
