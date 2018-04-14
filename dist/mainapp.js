@@ -10523,8 +10523,8 @@ function  markupBio(selector, data) {
     selector.html(`\
         <img src = "./images/${data.biopic}"
         alt = "avatar"
-        width = "80"
-        height = "80" >
+        width = "110"
+        height = "110" >
             <h3 class="lead">${data.name}
             <br>
             <span>${data.role}</span>
@@ -10691,6 +10691,14 @@ const APP_DATA = {
     },
     "projects": {
         "projects": [
+            {
+                "title": "Raonaq App",
+                "dates": "2018",
+                "description": "RaonaQ is a ONE stop Shop app for home & office decoration & design Uniting the whole design triangle to create the 1 st centralized Arabic Marketplace for design & decoration",
+                "links": {
+                    "web": "https://play.google.com/store/apps/details?id=com.inetworks.raonaq"
+                }
+            },
             {
                 "title": "Matager App",
                 "dates": "2017",
