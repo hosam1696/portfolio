@@ -1,8 +1,8 @@
 {
-  "name": "hosam portfoilo page",
-  "short_name": "H.Portfolio",
+  "name": "Portfolio",
+  "short_name": "HSA.Portfolio",
   "theme_color": "#23a9ec",
-  "background_color": "#1e1e1e",
+  "background_color": "#f6f6f6",
   "display": "standalone",
   "Scope": "/",
   "icons": [
