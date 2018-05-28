@@ -69,10 +69,10 @@ export const APP_DATA = {
         "contacts": {
             "primary_email": "hossam216921@eng.zu.edu.eg",
             "secondary_email": "hosamelnabawy@outlook.com",
-            "github": "https://github.com/hosamsam",
-            "codepen": "http://codepen.io/hosamsam/",
+            "github": "https://github.com/hosam1696",
+            "codepen": "http://codepen.io/hosam1696/",
             "twitter": "https://twitter.com/hosam1696",
-            "linkedIn": "https://www.linkedin.com/in/hosamsam/",
+            "linkedIn": "https://www.linkedin.com/in/hosam1696/",
             "mobile": "+201201914918",
             "location": "Cairo, Egypt"
         },
@@ -214,7 +214,26 @@ export const APP_DATA = {
                 "description": "Mobile App to facilate dealing with stores and exporters",
                 "images": "proj-img.jpg",
                 "links": {
-                    "github": "https://github.com/hosamsam/matagerApp"
+                    "github": "https://github.com/hosam1696/matagerApp"
+                }
+            },
+            {
+                "title": "LifeWithQuran App",
+                "dates": "2018",
+                "description": "read aand listen to holy quran",
+                "images": "proj-img.jpg",
+                "links": {
+                    "github": "https://github.com/hosam1696/quraan",
+                    "web": "https://play.google.com/store/apps/details?id=com.methaaq.lifewithquran",
+                }
+            },
+            {
+                "title": "Sella App",
+                "dates": "2018",
+                "description": "read aand listen to holy quran",
+                "images": "proj-img.jpg",
+                "links": {
+                    "web": "https://play.google.com/store/apps/details?id=com.methaaq.sella",
                 }
             },
             {
@@ -223,7 +242,7 @@ export const APP_DATA = {
                 "description": "Mobile App let students book travel tickets",
                 "images": "proj-img.jpg",
                 "links": {
-                    "github": "https://github.com/hosamsam/bawabaApp",
+                    "github": "https://github.com/hosam1696/bawabaApp",
                     "web": "https://itunes.apple.com/us/app/%D8%A8%D9%88%D8%A7%D8%A8%D8%A9-%D8%A7%D9%84%D9%86%D9%82%D9%84/id1110646052?ls=1&mt=8"
                 }
             },
@@ -233,7 +252,7 @@ export const APP_DATA = {
                 "description": "Mobile App to connect services providers to who need it",
                 "images": "proj-img.jpg",
                 "links": {
-                    "github": "https://github.com/hosamsam/UbzilApp"
+                    "github": "https://github.com/hosam1696/UbzilApp"
                 }
             },
             {
@@ -242,7 +261,7 @@ export const APP_DATA = {
                 "description": "website to let people chat and learn together",
                 "images": "proj-img.jpg",
                 "links": {
-                    "github": "https://github.com/hosamsam/RoaxAcademy-express",
+                    "github": "https://github.com/hosam1696/RoaxAcademy-express",
                     "web": "https://pure-ravine-76563.herokuapp.com/"
                 }
             },
@@ -252,8 +271,8 @@ export const APP_DATA = {
                 "description": "website built by Angular ang hosted on github",
                 "images": "proj-img.jpg",
                 "links": {
-                    "github": "https://github.com/hosamsam/e-commerce-angular",
-                    "web": "https://hosamsam.github.io/e-commerce-angular"
+                    "github": "https://github.com/hosam1696/e-commerce-angular",
+                    "web": "https://hosam1696.github.io/e-commerce-angular"
                 }
             },
             {
@@ -262,8 +281,8 @@ export const APP_DATA = {
                 "description": "responsive one page HTML and CSS for resturants",
                 "images": "proj-img.jpg",
                 "links": {
-                    "github": "https://github.com/hosamsam/omnifood",
-                    "web": "https://hosamsam.github.io/omnifood/resources/"
+                    "github": "https://github.com/hosam1696/omnifood",
+                    "web": "https://hosam1696.github.io/omnifood/resources/"
                 }
             },
             {
@@ -272,8 +291,8 @@ export const APP_DATA = {
                 "description": "Responsive website ",
                 "images": "proj-img.jpg",
                 "links": {
-                    "github": "https://github.com/hosamsam/hsa-travel",
-                    "web": "https://hosamsam.github.io/hsa-travel/"
+                    "github": "https://github.com/hosam1696/hsa-travel",
+                    "web": "https://hosam1696.github.io/hsa-travel/"
                 }
             }
         ],
