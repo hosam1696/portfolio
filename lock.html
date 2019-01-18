@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Twitter Lock</title>
+    <style>
+        * {
+            font-weight: 300;
+            box-sizing: border-box
+        }
+        .hidden {
+            display: none;
+        }
+        body {
+            font-family: sans-serif;
+            color: #333;
+            margin: 0
+        }
+
+        .header {
+            padding: 0 16px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .pass-show {
+            text-align: center;
+            margin: 50px 0 20px;
+        }
+
+        .pass-show .pass-digits {
+            /* background-color: red; */
+            height: 36px;
+            width: 260px;
+            margin: 0 auto;
+            border-radius: 20px;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .pass-show .pass-digits .pass-digit {
+            width: calc(100% / 4);
+            background-color: rgb(233, 232, 232);
+            height: 100%;
+            display: inline-block;
+            line-height: 35px;
+            font-size: 1.6rem;
+            color: #666
+        }
+
+        .pass-show .pass-digits .pass-digit:not(:last-of-type) {
+            border-right: 1px solid #fff;
+        }
+
+        .num-pad-holder {
+            width: 280px;
+            /* background-color: #ccc; */
+            margin: 40px auto 0;
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+
+        }
+
+        .num-pad-holder .num {
+            border: none;
+            background-color: transparent;
+            color: #333;
+            font-size: 1.7rem;
+            padding: 20px 0;
+            border-radius: 50%;
+        }
+
+        .my-word .message-holder {
+            width: 80%;
+            background-color: #e6ecf0;
+            margin: 100px auto 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 25px 25px 25px 0;
+            padding: 8px 16px;
+        }
+        .my-word .message-holder:last-of-type {
+            border-radius: 0 25px 25px 25px;
+            margin-top: 7px
+
+        }
+
+        .my-word .message-holder img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            margin-top: -45px;
+        }
+        .my-word .message-holder .message {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #14171a;
+            direction: rtl;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h2 id="title">App Lock</h2>
+    </div>
+    <div class="body ">
+        <div class="pass-show">
+            <h4>Enter Pass</h4>
+            <div class="pass-digits">
+                <div class="pass-digit pass-1">
+
+                </div>
+                <div class="pass-digit pass-2">
+
+                </div>
+                <div class="pass-digit pass-3">
+
+                </div>
+                <div class="pass-digit pass-4">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="num-pad-holder">
+            <button class="num" data-val="1">1</button>
+            <button class="num" data-val="2">2</button>
+            <button class="num" data-val="3">3</button>
+            <button class="num" data-val="4">4</button>
+            <button class="num" data-val="5">5</button>
+            <button class="num" data-val="6">6</button>
+            <button class="num" data-val="7">7</button>
+            <button class="num" data-val="8">8</button>
+            <button class="num" data-val="9">9</button>
+            <button disabled class="num"></button>
+            <button class="num" data-val="0">0</button>
+            <button disabled class="num"></button>
+        </div>
+    </div>
+
+    <section class="my-word hidden">
+        <div class="message-holder">
+                <img src="https://pbs.twimg.com/profile_images/1049507805802242048/FhX7Q_ym_400x400.jpg" alt="twitter-profile-image">
+                <p class="message">
+                    <i>
+                        كنت حابب أطمن عليكى واعرف انتى اخبارك ايه الفترة ديه؟ انتى مش بتظهرى كتير على النت وعايز أعرف انتى مدايقة من حاجة ولا ايه؟
+                        فياريت تعملى لايك لتويت يعبر عن حالتك 🌸 علشان انام مرتاح بس!
+                    </i>
+                </p>
+            </div>
+        <div class="message-holder ">
+            <p class="message">
+                <i>
+                        النهاردة 19 فى الشهر 
+                        لو وصلتى للصفحة ديه وقريتى الكلام ده 👌
+                        فانتى كده <b>شيماااء</b> اللى اعرفها 😂💪
+                </i>
+            </p>
+        </div>
+    </section>
+</body>
+
+
+<script>
+    const digitInputs = document.querySelectorAll('.num'),
+        passDigits = document.querySelectorAll('.pass-digit'),
+        myWordSection = document.querySelector('.my-word'),
+        title = document.getElementById('title'),
+        passBody = document.querySelector('.body');
+        
+
+    let enteredPass = [];
+
+    Array.from(digitInputs)
+        .forEach(input => input.addEventListener('click', (event) => {
+            const inputVal = event.target.dataset.val;
+            const passLength = enteredPass.length;
+            passDigits[passLength].innerHTML = ' ● ';
+            if (passLength < 4)
+                enteredPass.push(+inputVal);
+            if (passLength == 3) {
+                if (String(enteredPass) == '7,5,9,9') {
+                    console.info('Shimaa Logged In');
+                    myWordSection.classList.remove('hidden');
+                    passBody.classList.add('hidden');
+                    title.style.textAlign = 'center';
+                    title.innerHTML = 'الشيمااء 🌸';
+                }
+            }
+            console.log(enteredPass);
+        }))
+</script>
+
+</html>
