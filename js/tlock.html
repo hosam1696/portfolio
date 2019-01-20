@@ -16,7 +16,7 @@
             
         }
         .lighten {
-            color:#02a8dc
+            color:#05a5d6
         }
 
         .hidden {
@@ -32,6 +32,10 @@
         .header {
             padding: 0 16px;
             border-bottom: 2px solid #eee;
+        }
+        .text-center {
+            text-align: center;
+            display: block;
         }
 
         .header h2 {
@@ -103,7 +107,18 @@
 
         .num-pad-holder .num:focus {
             outline: none;
-            font-weight: bold
+            animation: zoomin 300ms ease-in-out 1;
+        }
+        @keyframes zoomin {
+            50% {
+                transform: scale(1.7);
+            font-weight: bold;
+
+            }
+            80% {
+                transform: scale(6);
+                opacity: .01
+            }
         }
 
         .my-word .message-holder {
@@ -116,6 +131,14 @@
             align-items: center;
             border-radius: 25px 25px 25px 0;
             padding: 8px 16px;
+            position: relative;
+        }
+        .my-word .message-holder .date {
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            font-size: 10px;
+            color: #999;
         }
 
         /* .my-word .message-holder:last-of-type {
@@ -175,13 +198,18 @@
 
     <section class="my-word hidden">
         <div class="message-holder">
-            <img src="https://pbs.twimg.com/profile_images/1049507805802242048/FhX7Q_ym_400x400.jpg" alt="twitter-profile-image">
+            <!-- <img src="https://pbs.twimg.com/profile_images/1049507805802242048/FhX7Q_ym_400x400.jpg" alt="twitter-profile-image"> -->
+            <img src="https://pbs.twimg.com/profile_images/1043613039923290112/K-TldhPG_400x400.jpg" alt="twitter-profile-image">
             <p class="message">
-                🌸انا بحس ان دعواتك بتستجاب يارب تكونى دعيتى أدعية حلوة النهاردة
-                <br>
-                درجة <b class="lighten">الأزرق</b> ده حلوة ؟
-                افتحها ولا أغمقها 😂
+                <label class="text-center"><b>الدعااء الجميل</b></label>
+                "
+                    لا اله الا الله العزيز الحكيم, سبحانك ربى العرش العظيم اللهم انى اسأل موجبات رحمتكوعزائم مغفرتك, اللهم انى اسألك الغنيمة من كل بروالسلامة من كل اثم, اللهم لا تدع حاجة الا وقضيتها ولا دعاء الا واستجبته <span class="lighten">يااارب</span>
+                "
             </p>
+            
+        <div class="date">   
+            12 / 9 / 2018
+        </div>
         </div>
     </section>
 </body>
@@ -193,13 +221,15 @@
         passDigits = document.querySelectorAll('.pass-digit'),
         myWordSection = document.querySelector('.my-word'),
         title = document.getElementById('title'),
-        passBody = document.querySelector('.body');
+        passBody = document.querySelector('.body'),
+        clickSound = new Audio('./cs.mp3');
     let enteredPass = [];
 
     Array.from(digitInputs)
         .forEach(input => input.addEventListener('click', (event) => {
             const inputVal = event.target.dataset.val;
             const passLength = enteredPass.length;
+            clickSound.play();
             passDigits[passLength].innerHTML = ' ● ';
             if (passLength < 4)
                 enteredPass.push(+inputVal);
@@ -209,7 +239,7 @@
                     myWordSection.classList.remove('hidden');
                     passBody.classList.add('hidden');
                     title.style.textAlign = 'center';
-                    title.innerHTML = 'الشيمااء 🌸';
+                    title.innerHTML = 'الشيمااء 💙';
                 } else {
                     passDigitsContainer.classList.add('shake');
                     setTimeout(() => {
