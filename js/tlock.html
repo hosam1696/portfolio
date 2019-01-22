@@ -241,64 +241,61 @@
     <section class="my-word hidden">
         <div class="message-holder">
             <!-- <img src="https://pbs.twimg.com/profile_images/1049507805802242048/FhX7Q_ym_400x400.jpg" alt="twitter-profile-image"> -->
-            <img src="https://pbs.twimg.com/profile_images/1043613039923290112/K-TldhPG_400x400.jpg" alt="twitter-profile-image">
+            <!-- <img src="https://pbs.twimg.com/profile_images/1043613039923290112/K-TldhPG_400x400.jpg" alt="twitter-profile-image"> -->
+            <img src="https://pbs.twimg.com/profile_images/1067989240276025344/oWQkSZ9q_400x400.jpg" alt="">
             <p class="message">
-                <label class="text-center"><b>الدعااء الجميل</b></label>
+                <label class="text-center">😄 <b>يوم 7 شهر 5</b> 😉</label>
                 "
-                لا اله الا الله العزيز الحكيم, سبحانك ربى العرش العظيم اللهم انى اسأل موجبات رحمتك وعزائم مغفرتك, اللهم
-                انى اسألك الغنيمة من كل بر والسلامة من كل اثم, اللهم لا تدع حاجة الا وقضيتها ولا دعاء الا واستجبته <span
-                    class="lighten">يااارب</span>
+عاطفى وحساس بشكل كبير يحب مساعدة الناس فهو شخصية اجتماعية يمتلك أسلوبا متميزاً بالتعامل مع الناس وذلك يعود الى شخصيته الساحرة والجذابة التى تتميز بثقافتها الواسعة فهو يتأقلم مع كافة الأوضاع بسرعة كبيرة ,غيرته شديدة ولكن قلبه محب فهو يمتاز بالجمال والمرح
+                والتفائل والبعد عن التشاؤم, فضولى بعض الشيىء ذو عقلية واسعةو ذاكرة قوية ومخيلة واسعة يحب بصدق وعمق رومانسى ولكنه كتوم ذو ابتسامة دائمة وله القدرة على تحمل التعب يمتاز بالخجل والاخلاص ونقاء القلب  واثق من نفسه وأفعاله يمتاز بالصبر جدا ولكنه عصبى بعض الشيىء
+                
                 "
             </p>
-
-            <div class="date">
-                12 / 9 / 2018
-            </div>
         </div>
     </section>
 </body>
 
 
 <script>
-    const digitInputs = document.querySelectorAll('.num'),
-        passDigitsContainer = document.querySelector('.pass-digits'),
-        passDigits = document.querySelectorAll('.pass-digit'),
-        myWordSection = document.querySelector('.my-word'),
-        loader = document.querySelector('.animated-loader'),
-        title = document.getElementById('title'),
-        passBody = document.querySelector('.body'),
-        clickSound = new Audio('./cs.mp3');
-    let enteredPass = [];
-    clickSound.volume = 0.01;
-    Array.from(digitInputs)
-        .forEach(input => input.addEventListener('click', (event) => {
-            const inputVal = event.target.dataset.val;
-            const passLength = enteredPass.length;
-            clickSound.play();
-            passDigits[passLength].innerHTML = ' ● ';
-            if (passLength < 4)
-                enteredPass.push(+inputVal);
-            if (passLength == 3) {
-                if (String(enteredPass) == '7,5,9,9') {
-                    console.info('Shimaa Logged In');
-                    myWordSection.classList.remove('hidden');
-                    passBody.classList.add('hidden');
-                    loader.classList.remove('hidden');
-                    title.style.textAlign = 'center';
-                    title.innerHTML = 'الشيمااء 💙';
-                    document.body.classList.add('custom-bg')
-                } else {
-                    passDigitsContainer.classList.add('shake');
-                    setTimeout(() => {
-                        passDigits.forEach(digit => digit.innerHTML = '');
-                        enteredPass = [];
-                        passDigitsContainer.classList.remove('shake');
+   const digitInputs = document.querySelectorAll('.num'),
+passDigitsContainer = document.querySelector('.pass-digits'),
+passDigits = document.querySelectorAll('.pass-digit'),
+myWordSection = document.querySelector('.my-word'),
+loader = document.querySelector('.animated-loader'),
+title = document.getElementById('title'),
+passBody = document.querySelector('.body'),
+clickSound = new Audio('./cs.mp3');
+let enteredPass = [];
+clickSound.volume = 0.01;
+Array.from(digitInputs)
+.forEach(input => input.addEventListener('click', (event) => {
+    const inputVal = event.target.dataset.val;
+    const passLength = enteredPass.length;
+    clickSound.play();
+    passDigits[passLength].innerHTML = ' ● ';
+    if (passLength < 4)
+        enteredPass.push(+inputVal);
+    if (passLength == 3) {
+        if (String(enteredPass) == '7,5,9,9') {
+            console.info('Shimaa Logged In');
+            myWordSection.classList.remove('hidden');
+            passBody.classList.add('hidden');
+            loader.classList.remove('hidden');
+            title.style.textAlign = 'center';
+            title.innerHTML = 'الشيمااء 💙';
+            document.body.classList.add('custom-bg')
+        } else {
+            passDigitsContainer.classList.add('shake');
+            setTimeout(() => {
+                passDigits.forEach(digit => digit.innerHTML = '');
+                enteredPass = [];
+                passDigitsContainer.classList.remove('shake');
 
-                    }, 200)
-                }
-            }
-            console.log(enteredPass);
-        }))
+            }, 200)
+        }
+    }
+    console.log(enteredPass);
+}))
 </script>
 
 </html>
