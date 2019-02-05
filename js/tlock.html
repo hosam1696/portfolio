@@ -96,16 +96,22 @@
         }
 
         .pass-show .pass-digits.shake {
-            animation: shake 100ms ease-in-out 2;
+            border: 1px solid transparent;
+            animation: shake 100ms ease-in-out 3;
         }
 
         @keyframes shake {
             25% {
                 transform: translateX(10px);
+                border-color: rgb(248, 159, 159);
             }
 
             75% {
                 transform: translateX(-10px);
+                border-color: rgb(248, 159, 159);
+            }
+            100% {
+                border-color: transparent
             }
         }
 
@@ -115,8 +121,8 @@
             height: 100%;
             display: inline-block;
             line-height: 35px;
-            font-size: 1.2rem;
-            color: #ccc
+            font-size: 1rem;
+            color: #999
         }
 
         .pass-show .pass-digits .pass-digit:not(:last-of-type) {
@@ -244,9 +250,9 @@
             <!--<img src="https://pbs.twimg.com/profile_images/1043613039923290112/K-TldhPG_400x400.jpg" alt="twitter-profile-image"> -->
             <!--<img src="https://pbs.twimg.com/profile_images/1067989240276025344/oWQkSZ9q_400x400.jpg" alt="">-->
             <p class="message"> 
-              😎 ع العموم انتى اى حاجة عليكى حلوة.
+                انا عــارف ان الوضع عندكم صـعـب شوية !
                 <br>
-                لما توصلى بالسلامة ان شاء الله ابقى طمنينى باى حاجة ⁦😁
+                الـمـهـم انتــى يـارب تكـونـى كـويـســـة بس !
             </p>
         </div>
     </section>
@@ -279,7 +285,7 @@ Array.from(digitInputs)
             passBody.classList.add('hidden');
             loader.classList.remove('hidden');
             title.style.textAlign = 'center';
-            title.innerHTML = 'الشيمااء 🌸';
+            title.innerHTML = 'الشـيمــااء 🌸';
             document.body.classList.add('custom-bg')
         } else {
             passDigitsContainer.classList.add('shake');
