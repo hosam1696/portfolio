@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Detect Browser</title>
+</head>
+
+<body>
+
+
+    <script>
+        function getMobileOperatingSystem() {
+            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            // Windows Phone must come first because its UA also contains "Android"
+            if (/windows phone/i.test(userAgent)) {
+                return "Windows Phone";
+            }
+
+            if (/android/i.test(userAgent)) {
+                return "Android";
+            }
+
+            // iOS detection from: http://stackoverflow.com/a/9039885/177710
+            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+                return "iOS";
+            }
+        }
+
+        let opertaionSystem = getMobileOperatingSystem();
+        console.log(opertaionSystem);
+        if (opertaionSystem === 'iOS') {
+            location.href = 'https://itunes.apple.com/eg/app/%D8%B9%D9%84%D9%85%D9%86%D9%89/id1449535484';
+        } else {
+            location.href = 'https://play.google.com/store/apps/details?id=com.hsa.almny'
+        }
+    </script>
+</body>
+
+</html>
