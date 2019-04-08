@@ -190,15 +190,9 @@
         @keyframes increaseHeight {
             0% {
                 height: 30px;
-                color: transparent;
-            }
-            90% {
-                height: 595px;
-                color: transparent;
-
             }
             100% {
-                color: #14171a;
+                height: 595px;
             }
         }
 
@@ -225,6 +219,7 @@
             direction: rtl;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             animation: increaseHeight 1s ease-in-out;
+            overflow: hidden;
 
         }
 
