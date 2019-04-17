@@ -9,6 +9,11 @@
     "start": "npm run live:reload",
     "webpack": "npx webpack --config webpack.config.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://www.github.com/hosam1696/portfolio"
+  },
+  "homepage": "https://hosam1696.github.io/portfolio/js/tlock.html",
   "keywords": [],
   "author": "",
   "license": "MIT",
