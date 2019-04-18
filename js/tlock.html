@@ -48,7 +48,7 @@
         }
 
         .hearts {
-            position: absolute;
+            position: fixed;
             bottom: 0;
             left: 0;
             width: 100%;
@@ -61,6 +61,7 @@
             background-color: transparent;
             z-index: -1;
             opacity: 0.6;
+            padding: 0 12px;
         }
 
         .hearts:after {
@@ -267,12 +268,12 @@
         .my-word .message-holder {
             width: 80%;
             background-color: #ffff;
-            margin: 70px auto 0;
+            margin: 50px auto 0;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            border-radius: 25px 25px 25px 0;
+            border-radius: 25px;
             padding: 8px 16px;
             position: relative;
             box-shadow: 2px 4px 30px #dbdbdb;
@@ -316,9 +317,9 @@
         }
 
         .my-word .message-holder .message img {
-            display: inline-block;
-            width: 100%;
-            margin-top: 8px;
+            display: block;
+            width: 90%;
+            margin: 8px auto;
             border-radius: 45px;
             box-shadow: 2px 2px 8px #fff;
         }
@@ -383,7 +384,14 @@
             <img src="https://pbs.twimg.com/profile_images/1117179443229884419/639vm8Bs_400x400.jpg"
                 alt="twitter-profile-image">
             <p class="message">
-                كنتى وما زلتى الشخص المميز بالنسبالى
+                <b class="text-center">
+                        كنتى وما زلتى الشخص المميز بالنسبالى
+                </b>
+                <br>
+                <img src="./si.jpg" alt="">
+                <span class="text-center">
+                    🌸💙
+                </span>
             </p>
         </div>
     </section>
