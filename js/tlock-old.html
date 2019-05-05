@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Secret Message</title>
+    <style>
+        * {
+            font-weight: 300;
+            box-sizing: border-box
+        }
+
+        b {
+            font-weight: 600;
+
+        }
+
+        .lighten {
+            color: #05a5d6
+        }
+
+
+
+        html,
+        body {
+            overflow: hidden;
+        }
+
+        body {
+            font-family: sans-serif;
+            color: #333;
+            margin: 0;
+            height: 100vh;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            padding-bottom: 30px;
+        }
+
+        .custom-bg {
+            /* background: radial-gradient(rgba(255, 255, 255, 0.3), rgb(250, 250, 250)), url(https://pbs.twimg.com/profile_banners/3312754912/1555204775/1500x500); */
+            background-color: #f6f6f6;
+            background-size: auto;
+            background-position: center;
+            /* background-repeat: no-repeat; */
+            position: relative;
+        }
+
+        .hearts {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            /* position: relative; */
+            background-color: transparent;
+            z-index: -1;
+            opacity: 0.6;
+            padding: 0 12px;
+        }
+
+        .hearts:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            /* background: linear-gradient(white, transparent 35%, transparent); */
+        }
+
+        .hearts .heart {
+            padding: 6px;
+            transform: translateY(30px);
+        }
+
+        .hearts .heart:nth-child(1) {
+            animation: toTop 4s linear infinite 1s;
+            transform: translateY(30px);
+        }
+
+        .hearts .heart:nth-child(2) {
+            animation: toTop 4s linear infinite 4s;
+            transform: translateY(40px);
+
+        }
+
+        .hearts .heart:nth-child(3) {
+            animation: toTop 4s linear infinite 3s;
+            transform: translateY(50px);
+
+        }
+
+        .hearts .heart:nth-child(4) {
+            animation: toTop 4s linear infinite 8s;
+        }
+
+        .hearts .heart:nth-child(5) {
+            animation: toTop 4s linear infinite 6s;
+            transform: translateY(35px);
+
+        }
+
+        .hearts .heart:nth-child(6) {
+            animation: toTop 4s linear infinite 10s;
+            transform: translateY(45px);
+
+        }
+
+        .hearts .heart:nth-child(7) {
+            animation: toTop 4s linear infinite 7s;
+            transform: translateY(60px);
+        }
+
+        .hearts .heart:nth-child(8) {
+            animation: toTop 4s linear infinite 1s;
+            transform: translateY(40px);
+
+        }
+
+        @keyframes toTop {
+            50% {
+                transform: translateY(-100px) rotate(360deg) scale(2);
+            }
+
+            80% {
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: translateY(-200px) rotate(360deg) scale(0);
+                opacity: 0;
+            }
+        }
+
+        .header {
+            padding: 14px;
+            border-bottom: 2px solid #eee;
+            position: relative;
+            background-color: #fff;
+            color: #706664;
+
+        }
+
+        .header .animated-loader {
+            padding: 0;
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            background: linear-gradient(to right, #eee 10%, #c4938f 15%, #c4938f 90%, #eee 95%);
+            background-size: 400%;
+            animation: movesize 15s linear forwards alternate infinite;
+
+        }
+
+        @keyframes movesize {
+            to {
+                background-position-x: 400%;
+            }
+        }
+
+        .text-center {
+            text-align: center;
+            display: block;
+        }
+
+        .header h2 {
+            margin: 0;
+        }
+
+        h4 p {
+            margin-top: 5px;
+        }
+
+        .pass-show {
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        .pass-show .pass-digits {
+            /* background-color: red; */
+            height: 36px;
+            width: 260px;
+            margin: 0 auto;
+            border-radius: 20px;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .pass-show .pass-digits.shake {
+            border: 1px solid transparent;
+            animation: shake 100ms ease-in-out 3;
+        }
+
+        @keyframes shake {
+            25% {
+                transform: translateX(10px);
+                border-color: rgb(248, 159, 159);
+            }
+
+            75% {
+                transform: translateX(-10px);
+                border-color: rgb(248, 159, 159);
+            }
+
+            100% {
+                border-color: transparent
+            }
+        }
+
+        .pass-show .pass-digits .pass-digit {
+            width: calc(100% / 4);
+            background-color: rgb(233, 232, 232);
+            height: 100%;
+            display: inline-block;
+            line-height: 35px;
+            font-size: 1rem;
+            color: #999
+        }
+
+        .pass-show .pass-digits .pass-digit:not(:last-of-type) {
+            border-right: 1px solid #fff;
+        }
+
+        .num-pad-holder {
+            width: 280px;
+            /* background-color: #ccc; */
+            margin: 40px auto 0;
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+
+        }
+
+        .num-pad-holder .num {
+            border: none;
+            background-color: transparent;
+            color: #333;
+            font-size: 1.7rem;
+            padding: 20px 0;
+            border-radius: 50%;
+        }
+
+        .num-pad-holder .num:focus {
+            outline: none;
+            animation: zoomin 300ms ease-in-out 1;
+        }
+
+        @keyframes zoomin {
+            50% {
+                transform: scale(1.7);
+                font-weight: bold;
+
+            }
+
+            80% {
+                transform: scale(4);
+                opacity: .01
+            }
+        }
+
+        .my-word .message-holder {
+            width: 80%;
+            background-color: #ffff;
+            margin: 50px auto 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 25px;
+            padding: 8px 16px;
+            position: relative;
+            box-shadow: 2px 4px 30px #dbdbdb;
+        }
+
+        @keyframes increaseHeight {
+            0% {
+                height: 30px;
+            }
+
+            100% {
+                height: 100px;
+            }
+        }
+
+        .my-word .message-holder .date {
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            font-size: 10px;
+            color: #999;
+        }
+
+        .my-word .message-holder>img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 4px solid #fff;
+            margin-top: -45px;
+        }
+
+        .my-word .message-holder .message {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #14171a;
+            direction: rtl;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            /* animation: increaseHeight .6s linear; */
+            overflow: hidden;
+
+        }
+
+        .my-word .message-holder .message img {
+            display: block;
+            width: 90%;
+            margin: 8px auto;
+            border-radius: 45px;
+            box-shadow: 2px 2px 8px #fff;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h2 id="title">App Lock</h2>
+        <div class="animated-loader hidden">
+            <p></p>
+        </div>
+    </div>
+
+    <div class="hearts hidden">
+        <div class="heart">😉</div>
+        <div class="heart">🌸</div>
+        <div class="heart">🎉</div>
+        <div class="heart">🌸</div>
+        <div class="heart">💙</div>
+        <div class="heart">✨</div>
+        <div class="heart">💪</div>
+        <div class="heart">🌸</div>
+        <div class="heart">😄</div>
+
+    </div>
+    <div class="body ">
+        <div class="pass-show">
+            <h4>Enter Password to show your
+                <p class="lighten">Secret Message</p>
+            </h4>
+            <div class="pass-digits">
+                <div class="pass-digit"></div>
+                <div class="pass-digit"></div>
+                <div class="pass-digit"></div>
+                <div class="pass-digit"></div>
+                <div class="pass-digit"></div>
+            </div>
+        </div>
+        <div class="num-pad-holder">
+            <button class="num" data-val="1">1</button>
+            <button class="num" data-val="2">2</button>
+            <button class="num" data-val="3">3</button>
+            <button class="num" data-val="4">4</button>
+            <button class="num" data-val="5">5</button>
+            <button class="num" data-val="6">6</button>
+            <button class="num" data-val="7">7</button>
+            <button class="num" data-val="8">8</button>
+            <button class="num" data-val="9">9</button>
+            <button disabled class="num"></button>
+            <button class="num" data-val="0">0</button>
+            <button disabled class="num"></button>
+        </div>
+    </div>
+
+    <section class="my-word hidden">
+        <div class="message-holder">
+            <img src="https://pbs.twimg.com/profile_images/1117179443229884419/639vm8Bs_400x400.jpg"
+                alt="twitter-profile-image">
+            <p class="message">
+                <span class="text-center">
+                    لو يوم 12 مطلعش عليا امتحان مفاجىء كدة 😄 هبقى اعرفك عشان تعملى حسابك بقا 🌸
+                </span>
+                <img src="https://a.top4top.net/p_1219afbeg1.jpeg" alt="" onclick="window.open('https://a.top4top.net/p_1219afbeg1.jpeg')">
+                <span class="text-center">
+                      جدولى اخيرا 👆
+                </span>
+            </p>
+        </div>
+    </section>
+</body>
+
+
+<script>
+    const digitInputs = document.querySelectorAll('.num'),
+        passDigitsContainer = document.querySelector('.pass-digits'),
+        passDigits = document.querySelectorAll('.pass-digit'),
+        myWordSection = document.querySelector('.my-word'),
+        heartsSection = document.querySelector('.hearts'),
+        loader = document.querySelector('.animated-loader'),
+        title = document.getElementById('title'),
+        passBody = document.querySelector('.body'),
+        clickSound = new Audio('./cs.mp3');
+    let enteredPass = [];
+    clickSound.volume = 0.01;
+    Array.from(digitInputs)
+        .forEach(input => input.addEventListener('click', (event) => {
+            const inputVal = event.target.dataset.val;
+            const passLength = enteredPass.length;
+            clickSound.play();
+            passDigits[passLength].innerHTML = ' ● ';
+            if (passLength < 5)
+                enteredPass.push(+inputVal);
+            if (passLength == 4) {
+                if (String(enteredPass) == '2,0,9,7,5') {
+                    console.info('Shimaa Logged In');
+                    myWordSection.classList.remove('hidden');
+                    heartsSection.classList.remove('hidden');
+                    passBody.classList.add('hidden');
+                    loader.classList.remove('hidden');
+                    title.style.textAlign = 'center';
+                    title.innerHTML = ' 🌸 الشـيمــااء';
+                    document.body.classList.add('custom-bg')
+                } else {
+                    passDigitsContainer.classList.add('shake');
+                    setTimeout(() => {
+                        passDigits.forEach(digit => digit.innerHTML = '');
+                        enteredPass = [];
+                        passDigitsContainer.classList.remove('shake');
+
+                    }, 200)
+                }
+            }
+            console.log(enteredPass);
+        }))
+</script>
+
+</html>
