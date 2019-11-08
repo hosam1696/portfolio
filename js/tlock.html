@@ -318,7 +318,8 @@
 
         }
 
-        .my-word .message-holder .message img, .my-word .message-holder .message video {
+        .my-word .message-holder .message img,
+        .my-word .message-holder .message video {
             display: block;
             width: 90%;
             margin: 8px auto;
@@ -328,6 +329,17 @@
 
         .hidden {
             display: none;
+        }
+
+        .reminder {
+            position: fixed;
+            bottom: 16px;
+            right: 16px;
+            background-color: #ffda6f;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            padding: 5px;
+            z-index: 999;
         }
     </style>
 </head>
@@ -340,20 +352,17 @@
         </div>
     </div>
 
-    <div class="hearts hidden">
+    <!-- <div class="hearts hidden">
         <div class="heart">😉</div>
         <div class="heart">🌸</div>
         <div class="heart">🎉</div>
-        <!-- <div class="heart">🌸</div> -->
-        <div class="heart">
-            💙
-        </div>
+        <div class="heart">💙</div>
         <div class="heart">🌙</div>
         <div class="heart">✨</div>
         <div class="heart">🌸</div>
         <div class="heart">😄</div>
+    </div> -->
 
-    </div>
     <div class="body ">
         <div class="pass-show">
             <h4>Enter Password to show your
@@ -383,24 +392,19 @@
     </div>
 
     <section class="my-word hidden">
-
+        <a href="https://hosam1696.github.io/portfolio/js/si.jpg" target="_blank" class="reminder">
+            🔔
+        </a>
         <div class="message-holder">
-    
-                        <img src="./qg.jpg"
-                            alt="twitter-profile-image">
-                        <p class="message">
-                            <span class="text-center">
-شيمااء ازيك. عاملة ايه اليومين دول؟
-<br>
-<b>
-"من السهل ان ينسى الإنسان نفسه لكن من الصعب 
-ان ينسى نفسا سكنت نفسه"
-</b>
-<br>
-بعد كده هجيبلك شعر 😅
-                           </span>
-                        </p>
-            
+
+            <img src="./qg.jpg" alt="twitter-profile-image">
+            <p class="message">
+                <span class="text-center">
+                    محاولة انى أعمل زيك وأكتب لكى وكده 😂😂
+                    <img src="./IMG_20191108_021307.jpg" alt="">
+                </span>
+            </p>
+
         </div>
     </section>
 </body>
@@ -430,7 +434,7 @@
                 if (String(enteredPass) == '7,5,9,9') {
                     console.info('Shimaa Logged In');
                     myWordSection.classList.remove('hidden');
-                    heartsSection.classList.remove('hidden');
+                    // heartsSection.classList.remove('hidden');
                     passBody.classList.add('hidden');
                     loader.classList.remove('hidden');
                     title.style.textAlign = 'center';
