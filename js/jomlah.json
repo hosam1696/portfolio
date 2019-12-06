@@ -3,6 +3,8 @@
     "ios-version": "2.2.80",
     "admin-credentials": {
         "username": "mobile_app",
-        "password": "J0mlahMobilePa$$w00rd"
+        "password": "J0mlahMobilePa$$w00rd",
+        "password-beta": "jomlahAppPa$$w00rd",
+        "username-beta": "mobile"
     }
 }
