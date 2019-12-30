@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "live:reload": "reload -p 1696 -b -s js/tlock.html",
-    "status": "lighthouse https://hosamsam.github.io/portfolio/",
+    "status": "lighthouse https://hosam1696.github.io/portfolio/",
     "start": "npm run live:reload",
     "webpack": "npx webpack --config webpack.config.js"
   },
