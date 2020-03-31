@@ -12,12 +12,12 @@
         "banners": [
             {
                 "id": 1,
-                "imageUrl": "https://banner.png",
+                "imageUrl": "https://3.files.edl.io/920b/18/10/18/205505-50877e40-4429-4910-8b17-9964c92c77fe.jpg",
                 "lockPayment": true
             },
             {
                 "id": 2,
-                "imageUrl": "https://banner.png",
+                "imageUrl": "https://3.files.edl.io/920b/18/10/18/205505-50877e40-4429-4910-8b17-9964c92c77fe.jpg",
                 "lockPayment": false,
                 "sku": "iphone" 
             }
