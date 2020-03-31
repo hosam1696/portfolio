@@ -6,5 +6,21 @@
         "password": "J0mlahMobilePa$$w00rd",
         "password-beta": "jomlahAppPa$$w00rd",
         "username-beta": "mobile"
+    },
+    "adds-banners": {
+        "active": 0,
+        "banners": [
+            {
+                "id": 1,
+                "imageUrl": "https://banner.png",
+                "lockPayment": true
+            },
+            {
+                "id": 2,
+                "imageUrl": "https://banner.png",
+                "lockPayment": false,
+                "sku": "iphone" 
+            }
+        ]
     }
 }
