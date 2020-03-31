@@ -8,8 +8,8 @@
         "username-beta": "mobile"
     },
     "adds-banners": {
-        "active": 1,
-        "minimumAmountToBuy": 30,
+        "active": 0,
+        "minimumAmountToBuy": 50,
         "banners": [
             {
                 "id": 1,
