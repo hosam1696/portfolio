@@ -8,12 +8,12 @@
         "username-beta": "mobile"
     },
     "adds-banners": {
-        "active": 0,
+        "active": 1,
         "minimumAmountToBuy": 50,
         "banners": [
             {
                 "id": 1,
-                "imageUrl": "https://3.files.edl.io/920b/18/10/18/205505-50877e40-4429-4910-8b17-9964c92c77fe.jpg",
+                "text": "عملائنا الكرام نوجه عنايتكم بانه سوف يتم استئناف الطلبات والبيع بعد الحظر الصحي حفظنا الله واياكم زورونا مرة ثانية وشكرا",
                 "lockPayment": true
             },
             {
