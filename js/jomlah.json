@@ -8,7 +8,7 @@
         "username-beta": "mobile"
     },
     "adds-banners": {
-        "active": 0,
+        "active": 1,
         "banners": [
             {
                 "id": 1,
