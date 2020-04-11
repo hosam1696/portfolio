@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <title>Your Secret Message</title>
     <style>
         * {
@@ -318,6 +318,43 @@
 
         }
 
+        .game {
+            height: 300px;
+            width: 100%;
+        }
+
+        .game button {
+            width: 40px;
+            height: 40px;
+            background-color: #1b7bce;
+            color: #fff;
+            border: none;
+        }
+
+        .result {
+            text-align: center;
+        }
+
+        .result button {
+            width: 50px;
+            height: 50px;
+            background-color: #eee;
+            color: #333;
+            border: none;
+            margin: 4px;
+            border-radius: 8px;
+            font-size: 20px;
+            cursor: url(https://shopify.github.io/draggable/assets/img/cursor-drag.png), auto;
+        }
+
+        .result .draggable-mirror {
+            background-color: #85fa31;
+        }
+
+        .result .draggable--over {
+            background-color: #f6baba;
+        }
+
         .my-word .message-holder .message img,
         .my-word .message-holder .message video {
             display: block;
@@ -385,36 +422,62 @@
         <button class="num" data-val="7">7</button>
         <button class="num" data-val="8">8</button>
         <button class="num" data-val="9">9</button>
-        <button disabled class="num"></button>
+        <button class="num" disabled></button>
         <button class="num" data-val="0">0</button>
-        <button disabled class="num"></button>
+        <button class="num" disabled></button>
     </div>
 </div>
 
 <section class="my-word hidden">
-    <a href="https://hosam1696.github.io/portfolio/js/si.jpg" target="_blank" class="reminder">
+    <a class="reminder" href="https://hosam1696.github.io/portfolio/js/si.jpg" target="_blank">
         🔔
     </a>
     <div class="message-holder">
 
-        <img src="./qg.jpg" alt="twitter-profile-image">
+        <img alt="twitter-profile-image" src="./qg.jpg">
         <p class="message">
             <span class="text-center">
-                هلا 🙋‍♂️
-                <img src="https://i.pinimg.com/originals/c8/1b/f5/c81bf55fad8114c88907afcba46fa2da.jpg" alt="">
-            </span>
+        <p> 👇 رتبى الأرقام 👇</p>
+        <div class="result">
+            <button></button>
+            <button></button>
+            /
+            <button></button>
+            /
+            <button></button>
+            <button></button>
+            <button></button>
+            <button></button>
+        </div>
+        </span>
         </p>
 
 
     </div>
 </section>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/draggable.bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/swappable.js"></script>
 
 
 <script>
+    function shuffle(a) {
+        let arr = a.sort();
+        for (let i = arr.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [arr[i], arr[j]] = [arr[j], arr[i]];
+        }
+        return arr;
+    }
+
+    const dayInArray = [2, 0, 9, 2, 0, 1, 8];
+    const password = [7, 5, 9, 9];
+    let btnsValues = [];
+    const random = (from, to) => Math.floor(Math.random() * (to - from)) + from
     const digitInputs = document.querySelectorAll('.num'),
         passDigitsContainer = document.querySelector('.pass-digits'),
         passDigits = document.querySelectorAll('.pass-digit'),
+        resultBtns = document.querySelectorAll('.result button'),
         myWordSection = document.querySelector('.my-word'),
         heartsSection = document.querySelector('.hearts'),
         loader = document.querySelector('.animated-loader'),
@@ -423,6 +486,54 @@
         clickSound = new Audio('./cs.mp3');
     let enteredPass = [];
     clickSound.volume = 0.01;
+
+    const btns = document.querySelectorAll('.result');
+    function shuffleBtns() {
+        btnsValues = shuffle([...dayInArray]);
+        Array.from(resultBtns).forEach((btn, i) => {
+            btn.value = btnsValues[i];
+            btn.innerHTML = btnsValues[i]
+        });
+    }
+
+    shuffleBtns();
+    let counter = 0;
+    const texts = [' 🎉 برافو 🎉', '💙 بحبك 💙', '💙 ايوة والله بحبك أوى💙', 'شكلك مش مصدقة انى بحبك 😂']
+    if (btns.length !== 0) {
+
+        const swappable = new Draggable.Swappable(btns, {
+            draggable: 'button'
+        });
+
+        console.log(swappable)
+        swappable.on('swappable:start', () => console.log('swappable:start'));
+        swappable.on('swappable:swapped', () => console.log('swappable:swapped'));
+        swappable.on('swappable:stop', () => {
+            clickSound.play();
+            setTimeout(() => {
+                let values = Array.from(document.querySelectorAll('.result button')).map(b => +b.value)
+                console.log('swappable:stop', dayInArray, values, isEqual(dayInArray, values))
+                if (isEqual(dayInArray, values)) {
+                    setTimeout(() => {
+                        alert(texts[counter++]);
+                        shuffleBtns();
+                        if (counter >= texts.length) {
+                            counter = 0;
+                        }
+                    }, 100)
+                }
+            }, 0)
+        });
+    }
+
+    function isEqual(arr1, arr2) {
+        if (arr1.length != arr2.length) {
+            return false
+        }
+
+        return arr1.every((val, index) => val == arr2[index])
+    }
+
     Array.from(digitInputs)
         .forEach(input => input.addEventListener('click', (event) => {
             const inputVal = event.target.dataset.val;
@@ -432,7 +543,7 @@
             if (passLength < 4)
                 enteredPass.push(+inputVal);
             if (passLength == 3) {
-                if (String(enteredPass) == '7,5,9,9') {
+                if (isEqual(enteredPass, password)) {
                     console.info('Shimaa Logged In');
                     myWordSection.classList.remove('hidden');
                     // heartsSection.classList.remove('hidden');
@@ -451,8 +562,6 @@
                     }, 200)
                 }
             }
-            console.log(enteredPass);
         }))
 </script>
-
 </html>
