@@ -10562,7 +10562,7 @@ const APP_DATA = {
             "secondary_email": "hosamelnabawy@outlook.com",
             "github": "https://github.com/hosam1696",
             "codepen": "http://codepen.io/hosam1696/",
-            "twitter": "https://twitter.com/hosam1696",
+            "twitter": "https://twitter.com/helnabawy20975",
             "linkedIn": "https://www.linkedin.com/in/hosam1696/",
             "mobile": "+201201914918",
             "location": "Cairo, Egypt"
@@ -10584,7 +10584,7 @@ const APP_DATA = {
             },
             {
                 "name": "Nodejs",
-                "rank": 8
+                "rank": 7
             }
         ],
         "skills": [
@@ -10691,6 +10691,14 @@ const APP_DATA = {
     },
     "projects": {
         "projects": [
+            {
+                "title": "Jomlah App",
+                "dates": "2019",
+                "description": "Jomlah App is Ecommece Application",
+                "links": {
+                    "web": "https://play.google.com/store/apps/details?id=com.jomlah.android"
+                }
+            },
             {
                 "title": "Raonaq App",
                 "dates": "2018",
@@ -10839,7 +10847,6 @@ const APP_DATA = {
     }
 };
 /* harmony export (immutable) */ __webpack_exports__["a"] = APP_DATA;
-
 
 
 

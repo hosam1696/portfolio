@@ -411,14 +411,15 @@
 
 
 <script>
-    const digitInputs = document.querySelectorAll('.num'),
-        passDigitsContainer = document.querySelector('.pass-digits'),
+    const $ = document.querySelector.bind(this),
+        digitInputs = document.querySelectorAll('.num'),
+        passDigitsContainer = $('.pass-digits'),
         passDigits = document.querySelectorAll('.pass-digit'),
-        myWordSection = document.querySelector('.my-word'),
-        heartsSection = document.querySelector('.hearts'),
-        loader = document.querySelector('.animated-loader'),
+        myWordSection = $('.my-word'),
+        heartsSection = $('.hearts'),
+        loader = $('.animated-loader'),
         title = document.getElementById('title'),
-        passBody = document.querySelector('.body'),
+        passBody = $('.body'),
         clickSound = new Audio('./cs.mp3');
     let enteredPass = [];
     clickSound.volume = 0.01;
@@ -430,8 +431,8 @@
             passDigits[passLength].innerHTML = ' ● ';
             if (passLength < 4)
                 enteredPass.push(+inputVal);
-            if (passLength == 3) {
-                if (String(enteredPass) == '7,5,9,9') {
+            if (passLength === 3) {
+                if (String(enteredPass) === '7,5,9,9') {
                     console.info('Shimaa Logged In');
                     myWordSection.classList.remove('hidden');
                     // heartsSection.classList.remove('hidden');

@@ -2,3 +2,4 @@
 [0102/012816.049:ERROR:process_info.cc(632)] range at 0xa912573000000000, size 0x20c fully unreadable
 [0102/012816.049:ERROR:process_info.cc(632)] range at 0x0, size 0x20c fully unreadable
 [0407/001649.815:ERROR:crash_report_database_win.cc(429)] unexpected header
+[0422/142225.774:ERROR:crash_report_database_win.cc(429)] unexpected header
