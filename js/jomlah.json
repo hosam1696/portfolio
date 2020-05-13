@@ -9,7 +9,7 @@
     },
     "adds-banners": {
         "active": 0,
-        "minimumAmountToBuy": 1,
+        "minimumAmountToBuy": 50,
         "banners": [
             {
                 "id": 1,
