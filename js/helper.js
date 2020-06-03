@@ -64,7 +64,7 @@ function markupStatus (selector, data) {
 export const APP_DATA = {
     "bio": {
         "name": "Hosam Elnabawy Ahmed",
-        "role": "FULL STACK JAVACSRIPT Developer",
+        "role": "Mobile Developer",
         "biopic": "h-profile.png",
         "contacts": {
             "primary_email": "hossam216921@eng.zu.edu.eg",

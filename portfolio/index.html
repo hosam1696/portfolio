@@ -37,8 +37,7 @@
         }
 
         .custom-bg {
-            /* background: radial-gradient(rgba(255, 255, 255, 0.3), rgb(250, 250, 250)), url(https://pbs.twimg.com/profile_banners/3312754912/1555204775/1500x500); */
-            background-color: #f6f6f6;
+            background: radial-gradient( rgb(214, 214, 214), rgb(255, 255, 255)), url(https://pbs.twimg.com/profile_banners/3312754912/1555204775/1500x500);
             background-size: auto;
             background-position: center;
             /* background-repeat: no-repeat; */
@@ -144,10 +143,13 @@
             padding: 14px;
             border-bottom: 2px solid #eee;
             position: relative;
-            background-color: #fff;
-            color: #706664;
-
         }
+        .header h2 {
+            text-shadow: 0 1px #fff;
+        }
+         .header.dark {
+            background: linear-gradient( #f3f3f3, #d2d2d2);
+        } 
 
         .header .animated-loader {
             padding: 0;
@@ -156,7 +158,8 @@
             left: 0;
             height: 2px;
             width: 100%;
-            background: linear-gradient(to right, #eee 10%, #c4938f 15%, #c4938f 90%, #eee 95%);
+            /* background: linear-gradient(to right, #7154d4 10%, #200d45 15%, #7155d2 90%, #200d45 95%); */
+            background: linear-gradient(#1b7bce 10%, #ecfbff 15%, #1b7bce 90%, #8fdef7 95%);
             background-size: 400%;
             animation: movesize 15s linear forwards alternate infinite;
 
@@ -269,17 +272,23 @@
 
         .my-word .message-holder {
             width: 80%;
-            background-color: #ffff;
-            margin: 50px auto 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-radius: 25px;
-            padding: 8px 16px;
-            position: relative;
-            box-shadow: 2px 4px 30px #dbdbdb;
-        }
+    /* background: #3590de; */
+    margin: 25px auto 0;
+    background-image: url(./ol.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 80vh;
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* color: #fff; */
+    /* align-items: center; */
+    /* border-radius: 0 30px; */
+    padding: 8px 16px;
+    position: relative;
+    /* box-shadow: 2px 4px 30px #bfbfbf; */
+
+}
 
         @keyframes increaseHeight {
             0% {
@@ -305,6 +314,7 @@
             border-radius: 50%;
             border: 4px solid #fff;
             margin-top: -45px;
+            z-index: 9;
         }
 
         .my-word .message-holder .message {
@@ -315,7 +325,8 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             /* animation: increaseHeight .6s linear; */
             overflow: hidden;
-
+            /* color: #fff */
+            padding: 40px 20px;
         }
 
         .game {
@@ -378,6 +389,15 @@
             padding: 5px;
             z-index: 999;
         }
+
+
+
+
+        a {
+            color: #eee;
+            text-decoration: none;
+        }
+
     </style>
 </head>
 
@@ -388,17 +408,6 @@
         <p></p>
     </div>
 </div>
-
-<!-- <div class="hearts hidden">
-    <div class="heart">😉</div>
-    <div class="heart">🌸</div>
-    <div class="heart">🎉</div>
-    <div class="heart">💙</div>
-    <div class="heart">🌙</div>
-    <div class="heart">✨</div>
-    <div class="heart">🌸</div>
-    <div class="heart">😄</div>
-</div> -->
 
 <div class="body ">
     <div class="pass-show">
@@ -430,28 +439,22 @@
 
 <section class="my-word hidden">
     <a class="reminder" href="https://hosam1696.github.io/portfolio/js/si.jpg" target="_blank">
+    <!-- <a class="reminder" href="https://i.ibb.co/G29J6vm/6-E793-C00-B483-4-FD1-892-C-5139-BDEA8-B09.jpg" target="_blank"> -->
         🔔
     </a>
     <div class="message-holder">
-
-        <img alt="twitter-profile-image" src="./qg.jpg">
+        <!-- <img alt="twitter-profile-image" src="./qg.jpg"> -->
+        
         <p class="message">
             <span class="text-center">
-                هلا والله 🌸
-                عاملة ايه طمنينى عليكى 🌸 
-                انا منتظر منك خطة رمضان وانا عامل حسابى انى مش هسمع افلام ف رمضان 
-                انا عجبنى الفيلم التركى اللى كنتى كاتباه 7 Yedinci Kogustaki Mucize 
-                بس Bizim Hikaye طلع مسلسل 😅
-               مش هلحق أخلصه 
-               <br>
-               شوفيلى حاجة اسمعها عجبتك انتى سمعتيها قبل كده 😄
+                شوفت 😅 المهم بس ياريت تاخدى بالك من نفسك 
+                وهقولك تانى متجيش على نفسك مش مستاهلة والله.
+                مستنى يومنا وعاوزه ييجى بسرعة  ✨
             </span>
         </p>
     </div>
 </section>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/draggable.bundle.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/swappable.js"></script>
 
 
 <script>
@@ -539,12 +542,13 @@
             if (passLength == 3) {
                 if (isEqual(enteredPass, password)) {
                     console.info('Shimaa Logged In');
+                    document.querySelector('.header').classList.add('dark')
                     myWordSection.classList.remove('hidden');
                     // heartsSection.classList.remove('hidden');
                     passBody.classList.add('hidden');
                     loader.classList.remove('hidden');
                     title.style.textAlign = 'center';
-                    title.innerHTML = ' 🌸 الشـيمــااء 🌸';
+                    title.innerHTML = ' 💙 الشـيمــااء 💙';
                     document.body.classList.add('custom-bg')
                 } else {
                     passDigitsContainer.classList.add('shake');

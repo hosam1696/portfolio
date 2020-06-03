@@ -1,7 +1,7 @@
 {
     "bio": {
         "name": "Hosam Elnabawy Ahmed",
-        "role": "FULL STACK JAVACSRIPT Developer",
+        "role": "Mobile Developer",
         "imgPath" : "./images/h-profile.png",
         "mobile": "+201201914918",
         "contacts": {
@@ -9,7 +9,7 @@
             "secondary_email": "hosamelnabawy@outlook.com",
             "github": "https://github.com/hosam1696",
             "codepen": "http://codepen.io/hosam1696/",
-            "twitter": "https://twitter.com/hosam1696",
+            "twitter": "https://twitter.com/helnabawy20975",
             "linkedIn": "https://www.linkedin.com/in/hosam1696/"
         },
         "welcomeMessage": "Welcome to my resume",
