@@ -20,7 +20,7 @@
                 "message": "<p>تم توقيف الدفع عند الاستلام لسلامتكم</p>"
             },
             {
-                "place": "CeckoutPage",
+                "place": "CheckoutPage",
                 "message": "<p>يرجى اضافة رقم جوال</p>"
             }
         
