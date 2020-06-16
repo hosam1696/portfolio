@@ -10,6 +10,21 @@
     "adds-banners": {
         "active": 0,
         "minimumAmountToBuy": 50,
+        "hintMessages": [
+            {
+                "place": "ThanksPage",
+                "message": "<p>يرجى العلم بانه سوف يتم تأخير طلبكم</p>"
+            },
+            {
+                "place": "PaymentPage",
+                "message": "<p>تم توقيف الدفع عند الاستلام لسلامتكم</p>"
+            },
+            {
+                "place": "CeckoutPage",
+                "message": "<p>يرجى اضافة رقم جوال</p>"
+            }
+        
+        ],
         "banners": [
             {
                 "id": 1,
