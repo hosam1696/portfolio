@@ -13,7 +13,7 @@
         "hintMessages": [
             {
                 "place": "ThanksPage",
-                "message": "<p>   نظرا للظروف الحالية,يرجى العلم بانه سوف يتم تأخير طلبكم</p>"
+                "message": ""
             },
             {
                 "place": "PaymentPage",
