@@ -1,6 +1,7 @@
 {
-    "android-version": "3.0.03",
-    "ios-version": "3.0.02",
+    "android-version": "3.2.06",
+    "ios-version": "3.2.00",
+    "android-version-huawei": "3.2.06",
     "admin-credentials": {
         "username": "mobile_app",
         "password": "J0mlahMobilePa$$w00rd",
@@ -13,7 +14,7 @@
         "hintMessages": [
             {
                 "place": "ThanksPage",
-                "message": "<p>   نظرا للظروف الحالية,يرجى العلم بانه سوف يتم تأخير طلبكم</p>"
+                "message": ""
             },
             {
                 "place": "PaymentPage",
