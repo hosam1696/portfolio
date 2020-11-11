@@ -230,7 +230,8 @@ body h1.lead:before {
     height: 100%;
     z-index: 3;
     display: flex;
-    /*align-items: center; */
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     padding: 3rem;
     text-align: left;
@@ -262,7 +263,7 @@ body h1.lead:before {
     padding: 3rem ;
     border-radius: 10px;
     height: fit-content;
-    /* width: 45vw; */
+    display: none;
     margin: 1rem auto;
     height: 450px;
 }
