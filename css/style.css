@@ -13,12 +13,7 @@
     font-size: 12px;
 }
 
-@media (min-width: 867px) {
-    #portfolio {
-        width: 95%;
-        margin: 0 auto;
-    }
-}
+
 
 body {
     overflow: hidden;
@@ -41,8 +36,7 @@ ul li {
     height: 400px;
 }
 
-#side-info,
-#side-info .info,
+
 #work .project-col .project {
     display: flex;
     flex-direction: column;
@@ -159,7 +153,7 @@ body h1.lead:before {
 
 #hero-section #cv-btn a {
     position: relative;
-    background: linear-gradient(#18b0f7, #18b0f7 50%, #03a9f4 50%);
+    background: linear-gradient(#18b0f7, #18b0f7 50%, #03a9f4 60%);
     border: none;
     color: #fff;
     padding: 4px 14px;
@@ -170,7 +164,8 @@ body h1.lead:before {
     justify-content: center;
     align-items: center;
     outline: none;
-    text-decoration: none
+    text-decoration: none;
+    border-radius: 20px;
 }
 
 #hero-section #cv-btn a svg {
@@ -243,19 +238,42 @@ body h1.lead:before {
 }
 
 #hero-section .hero-content .hero-title {
-    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2vh;
+}
+
+#hero-section .hero-content .hero-title  h2 {
+    font-size: 30px;
+    color: #555;
+    font-weight: 100;
+}
+
+#hero-section .hero-content .hero-title img {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    border: 4px solid #eee;
 }
 
 .right-col section#hero-section .hero-content #about {
-    padding: 6rem 3rem 1rem;
-    background: linear-gradient(#ffffffcf, #ffffffcf);
+    padding: 3rem ;
     border-radius: 10px;
-    border: 1px solid #fff;
     height: fit-content;
-    width: 45vw;
+    /* width: 45vw; */
     margin: 1rem auto;
     height: 450px;
-    overflow-y: scroll;
+}
+
+#about article {
+    border: 1px solid rgba(255, 255, 255, .3);
+    /* overflow-y: scroll; */
+    padding: 28px;
+    background-color: rgba(255, 255, 255, .2);
+    border-radius: 66px;
+
 }
 
 .right-col section#hero-section .hero-content #about h2 {
@@ -268,9 +286,19 @@ body h1.lead:before {
     border-radius: 0 0 8px 8px;
 }
 
-#hero-section .hero-content .hero-title p {
+.welcome-text  p {
     font-weight: normal;
-    color: #333;
+    font-family: "Eagle Lake", cursive;
+    font-size: 1.4rem;
+    color: #555;
+}
+
+ .welcome-text {
+    display: flex;
+    position: absolute;
+    z-index: 999;
+    top: 12;
+    padding:  0 18px;
 }
 
 .right-col section#hero-section .hero-content a {
@@ -288,32 +316,31 @@ body h1.lead:before {
     color: #111;
 }
 
-.right-col section#hero-section .hero-content h1 {
+.welcome-text  h1 {
     font-family: "Eagle Lake", cursive;
-    font-size: 6rem;
+    font-size: 3rem;
     color: #333;
     position: relative;
     z-index: 5;
-    margin-bottom: -10px;
+    margin-bottom: -20px;
     margin-top: 0;
     font-weight: normal;
     width: fit-content
 }
 
-.right-col section#hero-section .hero-content h1:before {
+.welcome-text  h1:before {
     content: "resume ";
     color: #fff;
     background: linear-gradient(to right, #1b7bce, #26b5f5 45%, #26b5f5 55%, #1b7bce);
     position: absolute;
     top: 10px;
-    font-size: 6rem;
-    padding-top: 0;
+    font-size: 3rem;
     left: 0;
-    width: 102%;
-    height: 48%;
+    width: 100%;
+    height: 30%;
     z-index: 4;
     overflow: hidden;
-    border-radius: 4px 30px 0 0;
+    border-radius: 30px 30px 0 0 ;
     line-height: 1.3;
 }
 
@@ -329,6 +356,46 @@ body h1.lead:before {
 .right-col #portfolio .container section {
     margin-bottom: 45px;
 }
+
+.hero-title .header-highlight {
+    font-family: "Eagle Lake", cursive;
+    
+        color: #26b5f5 ;
+        font-weight: bold;
+        position: relative;
+        display: table;
+        margin: 10px auto;
+        padding: 10px 40px;
+        letter-spacing: 1px;
+        margin-bottom: 40px;
+        border-radius: 40px;
+        font-size: 30px;
+        background-color: rgba(255, 255, 255, .4);   
+}
+
+.hero-title .header-highlight:after,
+.hero-title .header-highlight:before {
+  content: "";
+  width: 40px;
+  height: 20px;
+  background-color: transparent;
+  position: absolute;
+  border-radius: 40px;
+
+}
+
+.hero-title .header-highlight:after {
+    left: -2px;
+    bottom: -2px;
+    border-bottom: 2px solid #1b7bce;
+    border-left: 2px solid #1b7bce;
+  }
+  .hero-title .header-highlight:before {
+    top: -2px;
+    right: -2px;
+    border-top: 2px solid #1b7bce;
+    border-right: 2px solid #1b7bce;
+  }
 
 .right-col #portfolio .container #about h1.lead {
     margin-bottom: 15px;
@@ -355,18 +422,6 @@ body h1.lead:before {
     margin-left: -20px;
 }
 
-#side-info {
-    background: linear-gradient(45deg, #007ef9, #00BCD4);
-    color: #666;
-    box-shadow: inset -4px 0 #03a9f4, 5px 5px 26px #111;
-    padding: 10px 0 0 0;
-    height: 800px;
-    z-index: 5;
-    min-width: 250px;
-    max-width: 250px;
-    position: relative;
-    height: 100vh;
-}
 
 .for-l-side {
     position: fixed;
@@ -375,12 +430,13 @@ body h1.lead:before {
     opacity: 0;
 }
 
-#side-info li {
-    padding: 7px 10px;
+ li {
+     padding: 7px 3px 0;
+    /* padding: 5px; */
     font-size: 1.1rem;
 }
 
-#side-info li .vertical-sep {
+ li .vertical-sep {
     margin: -1px 5px;
     height: 10px;
     line-height: 3px;
@@ -388,7 +444,7 @@ body h1.lead:before {
     display: inline-flex;
 }
 
-#side-info .logo {
+ .logo {
     background: #03a9f4;
     color: #eee;
     padding: 8px 10px;
@@ -398,34 +454,34 @@ body h1.lead:before {
     justify-content: space-between;
 }
 
-#side-info .logo .toggle-side {
+ .logo .toggle-side {
     font-size: 1.5rem;
     transition: transform .3s ease-in;
     transform: rotate(45deg);
     cursor: pointer;
 }
 
-#side-info .logo .toggle-side:hover {
+ .logo .toggle-side:hover {
     transform: rotate(0);
 }
 
-#side-info .logo .toggle-side.toggeled {
+ .logo .toggle-side.toggeled {
     transform: rotate(0);
 }
 
-#side-info .avatar {
+ .avatar {
     display: flex;
     justify-content: center;
     flex-direction: column
 }
 
-#side-info .avatar img {
+ .avatar img {
     border-radius: 50%;
     margin: 7px auto 10px;
     box-shadow: 0 4px #1b1b1b;
 }
 
-#side-info .avatar h3 {
+ .avatar h3 {
     position: relative;
     text-align: center;
     font-weight: normal;
@@ -433,7 +489,7 @@ body h1.lead:before {
     margin-top: 6px;
 }
 
-#side-info .avatar h3:after {
+ .avatar h3:after {
     content: "";
     display: flex;
     height: 2px;
@@ -446,7 +502,7 @@ body h1.lead:before {
     box-shadow: 1px 1px #314148;
 }
 
-#side-info .avatar h3:before {
+ .avatar h3:before {
     content: "";
     display: flex;
     height: 5px;
@@ -459,12 +515,12 @@ body h1.lead:before {
     box-shadow: 0 1px #314148;
 }
 
-#side-info .info {
+.info {
     flex: 1;
 }
 
-#side-info .info .statics p.head,
-#side-info .info .contact p.head {
+.info .statics p.head,
+.info .contact p.head {
     padding-left: 5px;
     margin-bottom: 5px;
     font-weight: bold;
@@ -476,24 +532,17 @@ body h1.lead:before {
     font-size: 14px;
 }
 
-#side-info .info .statics {
+ .info .statics {
     flex: 1;
 }
 
-#side-info .info .statics .lang-stat p {
-    font-weight: bold;
-    letter-spacing: 1px;
-    padding-left: 10px;
-    margin-bottom: 0.3rem;
-    color: #333
-}
 
-#side-info .info .statics .lang-stat:hover>span.filled {
+ .info .statics .lang-stat:hover>span.filled {
     background: #cccbcb;
     box-shadow: 3px 3px #141414;
 }
 
-#side-info .info .statics .lang-stat span {
+ .info .statics .lang-stat span {
     display: inline-flex;
     width: 12px;
     height: 24px;
@@ -504,57 +553,66 @@ body h1.lead:before {
     box-shadow: 2px 2px #141414;
 }
 
-#side-info .info .statics .lang-stat span.filled {
+ .info .statics .lang-stat span.filled {
     background: #eee;
     transition: background 0.2s ease;
 }
 
-#side-info .info .statics .lang-stat span:first-of-type {
+ .info .statics .lang-stat span:first-of-type {
     margin-left: 20px;
 }
 
-#side-info .info .contact {
+ .info .contact {
     flex: 1
 }
 
-#side-info .info .contact ul.navbar-nav li svg {
+ .info .contact ul.navbar-nav li svg {
     width: 18px;
     vertical-align: middle;
     margin-top: -4px
 }
 
-#side-info .info .contact ul.navbar-nav-line {
+ .info .contact ul.navbar-nav-line {
     display: flex;
+
+
     justify-content: space-around;
-    padding: 0;
+    align-items: center;
+    padding: 0 14px;
+    background-color: rgba(255, 255, 255, .2);
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, .204);
+
+
+
 }
 
-#side-info .info .contact ul li.line {
+ .info .contact ul li.line {
     display: inline-flex;
     font-size: 25px;
     transition: transform 0.2s linear;
 }
 
-#side-info .info .contact ul li.line a svg,
-#side-info .info .contact ul li svg {
+ .info .contact ul li.line a svg,
+ .info .contact ul li svg {
     width: 22px;
     fill: #fff;
     transition: fill 0.2s ease;
 }
 
-#side-info .info .contact ul li.line a svg * {
-    fill: #fff
+ .info .contact ul li.line a svg * {
+    fill: rgba(96, 93, 93, 0.3)
 }
 
-#side-info .info .contact li i {
+ .info .contact li i {
     transition: transform 0.2s ease-in-out;
 }
 
-#side-info .info .contact li:hover>svg {
+ .info .contact li:hover>svg {
     fill: #fff;
 }
 
-#side-info .info .contact li a {
+ .info .contact li a {
     color: #eee;
     text-decoration: none;
     position: relative;
@@ -566,7 +624,7 @@ body h1.lead:before {
     cursor: pointer;
 }
 
-#side-info .info .contact li:not(.line) a:before {
+ .info .contact li:not(.line) a:before {
     content: "";
     width: 104%;
     height: 104%;
@@ -582,16 +640,19 @@ body h1.lead:before {
     background: #03a9f4;
 }
 
-#side-info .info .contact li a:hover {
+ .info .contact li a:hover {
     color: #fff;
 }
 
-#side-info .info .contact li a:hover:before {
+ .info .contact li a:hover:before {
     transform: scale(1);
 }
 
-#side-info .info .contact ul li.line:hover {
+ .info .contact ul li.line:hover {
     transform: scale(1.3);
+}
+.info .contact ul li.line:hover svg * {
+    fill: #333;
 }
 
 .project-col {
@@ -609,6 +670,44 @@ body h1.lead:before {
     background: #fff;
     border-radius: 8px;
 }
+#work .header-highlight {
+    font-family: "Eagle Lake", cursive;
+    
+        color: #abea61;
+        font-weight: bold;
+        position: relative;
+        display: table;
+        margin: 10px auto;
+        padding: 10px 60px;
+        text-shadow: 1px 1px #4CAF50;
+        letter-spacing: 1px;
+        margin-bottom: 40px;
+        font-size: 30px;
+        background-color: rgba(255, 255, 255, .6);   
+        border-radius: 40px;
+        border: 1px solid rgba(255, 255, 255, .8);
+}
+
+/* #work .header-highlight:after,
+#work .header-highlight:before {
+  content: "";
+  width: 40px;
+  height: 20px;
+  background-color: transparent;
+  position: absolute;
+}
+#work .header-highlight:after {
+  left: -2px;
+  bottom: -2px;
+  border-bottom: 2px solid #4CAF50;
+  border-left: 2px solid #4CAF50;
+}
+#work .header-highlight:before {
+  top: -2px;
+  right: -2px;
+  border-top: 2px solid #4CAF50;
+  border-right: 2px solid #4CAF50;
+} */
 
 #work .project-col .project:hover {
     box-shadow: 0 0 0 #d6d6d6;
@@ -715,15 +814,14 @@ body h1.lead:before {
     #hero-section .hero-content .hero-title {
         transform: scale(0.8);
     }
-    #side-info {
-        position: absolute;
-        left: -100%;
-        transition: left 0.25s linear;
+    .welcome-text {
+        display: none;
     }
+     
     .right-col section#hero-section .hero-content #about {
         width: 80vw;
         height: 450px;
-        overflow-y: scroll;
+        /* overflow-y: scroll; */
     }
     .show-side {
         display: flex;
@@ -771,6 +869,15 @@ body h1.lead:before {
     }
 }
 
+footer {
+    padding: 30px;
+    text-align: center;
+    color: #555;
+    background-color: #fff;
+    border-top: 1px solid #f0f0f0;
+
+}
+
 @media (min-width: 780px) {
     #work .projects-holder {
         display: flex;
@@ -785,24 +892,10 @@ body h1.lead:before {
         max-width: 33%;
         width: 33%;
     }
-    .row {
-        display: flex
-    }
-    #side-info {
-        width: 20%;
-        height: 100vh
-    }
-    .right-col {
-        width: calc(100% - 250px);
-    }
+   
 }
 
-@media (min-width: 1120px) {
-    #work .project-col {
-        width: 33%;
-        min-width: 33%;
-    }
-}
+
 
 .background {
     font-family: "Eagle Lake", cursive;
