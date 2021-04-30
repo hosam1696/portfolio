@@ -3,7 +3,7 @@
     "android-version-huawei": "3.3.02",
     "ios-version": "3.3.21",
     "ios-version-ios": "3.3.21",
-    "priority": 99,
+    "priority": 0,
     "admin-credentials": {
         "username": "mobile_app",
         "password": "J0mlahMobilePa$$w00rd",
