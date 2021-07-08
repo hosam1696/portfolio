@@ -11,7 +11,7 @@
         "username-beta": "mobile"
     },
     "adds-banners": {
-        "active": 0,
+        "active": 1,
         "minimumAmountToBuy": 50,
         "hintMessages": [
             {
@@ -31,7 +31,7 @@
         "banners": [
             {
                 "id": 1,
-                "text": "عملائنا الكرام نوجه عنايتكم بانه سوف يتم استئناف الطلبات بعد عيد الفطر المبارك باذن الله",
+                "text": "عملائنا الكرام نوجه عنايتكم بانه سوف يتم استئناف الطلبات  قريباً باذن الله",
                 "lockPayment": true
             },
             {
